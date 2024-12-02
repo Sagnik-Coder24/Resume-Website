@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1f1f, #121212);
+  color: #ffffff;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
+  padding: 20px;
+  text-align: center;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
+  padding: 10px;
+  text-align: center;
+}
