@@ -1,4 +1,4 @@
-import data from "./assets/data.json";
+import data from "./assets/data.jsx";
 import React from "react";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
@@ -6,11 +6,13 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 
 import "./index.css";
+import Education from "./components/Education.jsx";
 
 function App() {
   return (
     <div className="min-h-screen bg-darkBg text-white">
       <Header
+        pic={data.personal_info.profile_picture}
         name={data.personal_info.name}
         title={data.personal_info.title}
         headline={data.personal_info.headline}
@@ -19,6 +21,7 @@ function App() {
       <Summary summary={data.summary} />
       <Skills skills={data.skills} />
       <Experience experience={data.experience} />
+      <Education education={data.education} />
     </div>
   );
 }

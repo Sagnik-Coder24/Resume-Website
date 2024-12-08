@@ -1,11 +1,11 @@
 // src/components/Header.jsx
 import React from "react";
 
-const Header = ({ name, title, headline, contact }) => {
+const Header = ({ pic, name, title, headline, contact }) => {
   return (
     <header className="text-center p-8 bg-black bg-opacity-80 rounded-lg shadow-xl">
       <img
-        src="https://www.shutterstock.com/image-photo/smiling-young-middle-eastern-man-260nw-2063524544.jpg"
+        src={pic}
         alt="Profile"
         className="w-32 h-32 rounded-full mx-auto mb-4"
       />
