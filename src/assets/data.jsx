@@ -1,4 +1,22 @@
 import profile_pic from "./images/profile_pic.jpeg";
+import react_is from "./images/react_is.jpeg";
+import sql from "./images/SQL for Beginners.jpeg";
+import html from "./images/html.jpeg";
+import rdd from "./images/rdd.jpeg";
+import js from "./images/js.jpeg";
+import java from "./images/java.jpeg";
+import mvc from "./images/mvc.jpeg";
+import api from "./images/api.jpeg";
+import sql2 from "./images/sql.jpeg";
+import dbms from "./images/dbms.jpeg";
+import ai from "./images/ai.jpeg";
+import pl from "./images/pl.jpeg";
+import react from "./images/react.jpeg";
+import redux from "./images/redux.jpeg";
+import coph from "./images/coph.jpeg";
+import sc from "./images/sc.jpeg";
+import course from "./images/course.jpeg";
+import todopink from "./images/todopink.jpeg";
 
 export default {
   personal_info: {
@@ -265,30 +283,140 @@ export default {
   ],
   certifications: [
     {
-      title: "AWS Certified Solutions Architect",
-      organization: "Amazon Web Services",
-      date: "2023-08-15",
+      img: react_is,
+      title: "React Training",
+      organization: "Internshala Trainings",
+      date: "Sep 2021",
+      url: "https://trainings.internshala.com/s/v/132756/72774ffd",
     },
     {
-      title: "Certified Kubernetes Administrator",
-      organization: "Linux Foundation",
-      date: "2022-10-12",
+      img: sql,
+      title: "SQL for Beginners",
+      organization: "Udemy",
+      date: "Mar 2022",
+      url: "https://ude.my/UC-8aede5dc-68eb-4e6c-a9d9-5df714ccc93a",
+    },
+    {
+      img: html,
+      title: "Responsive Web Design",
+      organization: "Udemy",
+      date: "Mar 2022",
+      url: "https://ude.my/UC-55cd2c51-4c97-45dd-b35f-09874788aebf",
+    },
+    {
+      img: rdd,
+      title: "Relational Database Design",
+      organization: "Udemy",
+      date: "Mar 2022",
+      url: "https://ude.my/UC-940507d9-d874-4892-93c4-d82711a387b1",
+    },
+    {
+      img: js,
+      title: "JavaScript Basics",
+      organization: "Udemy",
+      date: "Mar 2022",
+      url: "https://ude.my/UC-532a0cde-c0e1-4174-82f9-6beedfd56e3a",
+    },
+    {
+      img: java,
+      title: "Core Java Made Easy",
+      organization: "Udemy",
+      date: "Apr 2022",
+      url: "https://www.ude.my/UC-a6f0de4c-210d-4969-9363-3cf544c8037f",
+    },
+    {
+      img: mvc,
+      title: "Spring MVC",
+      organization: "Udemy",
+      date: "May 2022",
+      url: "https://ude.my/UC-bc538abf-a375-42e8-81bc-a8e0d7747bbf",
+    },
+    {
+      img: api,
+      title: "REST APIs with Postman",
+      organization: "Udemy",
+      date: "Aug 2022",
+      url: "https://ude.my/UC-faecb1b3-713c-41e6-b2e4-e3638fecd10f",
+    },
+    {
+      img: sql2,
+      title: "The Complete Oracle SQL Certification Course",
+      organization: "Udemy",
+      date: "Oct 2022",
+      url: "https://ude.my/UC-10b45f2c-7ba5-4d80-9771-dfe1d2008c67",
+    },
+    {
+      img: dbms,
+      title: "Database Management System",
+      organization: "Udemy",
+      date: "Aug 2023",
+      url: "https://ude.my/UC-8dc051cf-b65d-4f96-9af0-76e228167338",
+    },
+    {
+      img: ai,
+      title: "Complete ChatGPT Course",
+      organization: "Udemy",
+      date: "May 2024",
+      url: "https://ude.my/UC-6291e84e-f411-40c8-8a65-ac82313531f6",
+    },
+    {
+      img: pl,
+      title: "Beginner to Advanced PL/ SQL",
+      organization: "Udemy",
+      date: "Sep 2024",
+      url: "https://ude.my/UC-4636347e-955d-410d-8ac8-89f9a6f6953e",
+    },
+    {
+      img: react,
+      title: "The Ultimate Redux Course 2023",
+      organization: "Udemy",
+      date: "Oct 2024",
+      url: "https://ude.my/UC-044bf1f4-c6e5-4b20-ac24-30d3457920b1",
+    },
+    {
+      img: redux,
+      title: "Complete React JS web developer with ES6",
+      organization: "Udemy",
+      date: "Oct 2024",
+      url: "https://ude.my/UC-515494f3-15cb-40b7-8112-0f2170df6ce2",
     },
   ],
   projects: [
     {
-      title: "Personal Portfolio Website",
+      title: "Simple Calculator",
       description:
-        "A responsive personal website to showcase my skills, experience, and projects.",
-      technologies: ["HTML", "CSS", "JavaScript", "React"],
-      url: "https://www.johndoe.com",
+        "This project demonstrates the creation of a simple calculator using React.js, showcasing React's state management and component-based architecture. It highlights how to build dynamic and interactive UIs with clean, reusable code. Ideal for beginners or those looking to refine their React skills.",
+      technologies: ["React", "JavaScript", "HTML", "CSS"],
+      url: "https://sagnik-coder24.github.io/Simple-Calculator/",
+      gh: "https://github.com/Sagnik-Coder24/Simple-Calculator",
+      img: sc,
     },
     {
-      title: "Task Manager App",
+      title: "Comfy House: Your Online Furniture Haven",
       description:
-        "A task management app to help users organize their to-do lists with real-time synchronization.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      url: "https://github.com/johndoe/task-manager",
+        "Comfy House is a sleek furniture shopping site that showcases my HTML, CSS, and JavaScript skills. It offers a smooth, responsive shopping experience, allowing users to browse items, add them to a cart, and view selections seamlessly on both desktop and mobile devices.",
+      technologies: ["HTML", "CSS", "JavaScript", "JSON"],
+      url: "https://sagnik-coder24.github.io/Comfy-House/",
+      gh: "https://github.com/Sagnik-Coder24/Comfy-House",
+      img: coph,
+    },
+    {
+      title: "Course Purchase",
+      description:
+        "The Course Purchase app is a React project that lets users browse and select courses with a user-friendly interface. Built with React and Vite, it focuses on React hooks, state management, and props drilling.",
+      technologies: ["React", "Vite", "JavaScript", "CSS"],
+      url: "https://sagnik-coder24.github.io/Course-Purchase/",
+      gh: "https://github.com/Sagnik-Coder24/Course-Purchase",
+      img: course,
+    },
+    {
+      title: "Todos List: Stay Organized, One Task at a Time",
+      description:
+        "The Todos List app is a React-based task manager that lets users add, manage, and delete tasks with an intuitive interface, built using Bootstrap for a clean layout.",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "Bootstrap"],
+      url: "https://mytodoslist2407.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/Todos-List",
+      img: todopink,
     },
   ],
   languages: [

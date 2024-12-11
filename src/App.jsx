@@ -7,6 +7,8 @@ import Experience from "./components/Experience";
 
 import "./index.css";
 import Education from "./components/Education.jsx";
+import Certifications from "./components/Certifications.jsx";
+import Projects from "./components/Projects.jsx";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Skills skills={data.skills} />
       <Experience experience={data.experience} />
       <Education education={data.education} />
+      <Certifications certifications={data.certifications} />
+      <Projects projects={data.projects} />
     </div>
   );
 }
