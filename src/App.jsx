@@ -9,6 +9,9 @@ import "./index.css";
 import Education from "./components/Education.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Projects from "./components/Projects.jsx";
+import Languages from "./components/Languages.jsx";
+import Interests from "./components/Interests.jsx";
+import Publications from "./components/Publications.jsx";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
       <Education education={data.education} />
       <Certifications certifications={data.certifications} />
       <Projects projects={data.projects} />
+      <Interests interests={data.interests} />
+      <Languages languages={data.languages} />
+      <Publications publications={data.publications} />{" "}
     </div>
   );
 }

@@ -17,6 +17,16 @@ import coph from "./images/coph.jpeg";
 import sc from "./images/sc.jpeg";
 import course from "./images/course.jpeg";
 import todopink from "./images/todopink.jpeg";
+import snake from "./images/snake.jpeg";
+import tic from "./images/tic.jpeg";
+import random from "./images/random.jpeg";
+import box from "./images/box.jpeg";
+import yt from "./images/yt.jpeg";
+import us from "./images/us.jpeg";
+import gh from "./images/gh.jpeg";
+import chapp from "./images/chapp.jpeg";
+import todor from "./images/todor.jpeg";
+import ecom from "./images/ecom.jpeg";
 
 export default {
   personal_info: {
@@ -52,65 +62,54 @@ export default {
       "Core Java",
     ],
     "Web Development": [
-      "React.js",
-      "Front-End Development",
+      "React JS",
       "HTML",
-      "CSS (Cascading Style Sheets)",
+      "CSS",
       "SASS",
       "Tailwind CSS",
-      "Bootstrap (Framework)",
+      "Bootstrap",
       "Vite",
       "REST APIs",
-      "JSON",
     ],
     "Backend Development": [
       "Node.js",
+      "Express.js",
       "Spring MVC",
       "Spring Boot",
-      "Java Database Connectivity (JDBC)",
-      "Hibernate",
-      "Java Persistence API",
-      "Apache Maven",
     ],
     "Database Management": [
+      "MySQL",
+      "Oracle SQL",
+      "Microsoft SQL",
       "Database Management System (DBMS)",
       "PostgreSQL",
       "Firebase",
-    ],
-    "Problem Solving & Algorithms": [
-      "Data Structures & Algorithms (DSA)",
-      "Problem Solving",
-      "Generative AI",
     ],
     "Version Control & Tools": [
       "Git",
       "GitHub",
       "Postman API",
-      "npm",
       "Chrome DevTools",
       "Microsoft Visual Studio Code",
-      "Eclipse",
     ],
-    "Testing & Development Practices": [
-      "Unit Testing",
-      "Mockito",
-      "JUnit",
-      "Test-Driven Development",
-    ],
-    "Software & Platforms": ["Microsoft Office", "Arduino", "Spring Boot"],
     "Soft Skills": [
       "Teamwork",
       "Time Management",
       "Analytical Skills",
       "Personal Development",
+      "Communication",
+      "Problem-Solving",
+      "Adaptability",
+      "Leadership",
+      "Attention to Detail",
+      "Decision-Making",
     ],
     "Additional Knowledge": [
-      "Physics",
-      "Mathematics",
-      "Engineering",
+      "Data Structures & Algorithms (DSA)",
+      "Generative AI",
+      "ChatGPT",
       "Object-Oriented Programming (OOP)",
       "Data Analysis",
-      "ChatGPT",
     ],
   },
   experience: [
@@ -418,56 +417,201 @@ export default {
       gh: "https://github.com/Sagnik-Coder24/Todos-List",
       img: todopink,
     },
+    {
+      title: "Snake Mania",
+      description:
+        "Snake Mania is an engaging Snake game developed with HTML, CSS, and JavaScript. It offers classic gameplay, responsive design, and score tracking, delivering a nostalgic experience on any device. Challenge yourself to beat your high score!",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      url: "https://snakemania-saglyf.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/Snake-Mania",
+      medium:
+        "https://blog.stackademic.com/snake-mania-the-journey-of-a-beginner-developer-354c66c0c2ca",
+      img: snake,
+    },
+    {
+      title: "Tic Tac Toe",
+      description:
+        "Enjoy the classic fun of Tic Tac Toe, reimagined for the web with React and SCSS! Challenge friends, track your moves, and experience a sleek, responsive design for endless gaming enjoyment.",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "SASS", "Git"],
+      url: "https://tictactoegame2407.surge.sh/",
+      gh: "https://github.com/Sagnik-Coder24/tictactoe",
+      img: tic,
+    },
+    {
+      title: "Random User Fetcher",
+      description:
+        "Random User Fetcher is a web app built with React and Vite that retrieves random user profiles from the Random User API. It offers a clean, responsive design with loading states for a seamless experience, making it an excellent tool for practicing React, Vite, and API integration.",
+      technologies: ["React", "JavaScript", "API", "CSS", "Vite"],
+      url: "https://sagnik-coder24.github.io/Random-User/",
+      gh: "https://github.com/Sagnik-Coder24/Random-User",
+      img: random,
+    },
+    {
+      title: "Box-Office",
+      description:
+        "The Box-Office Web App is a React.js platform for discovering movies, web series, and actor details. It allows users to search titles, view release dates, ratings, and actor profiles, with real-time data fetched from the TVmaze API for an up-to-date, responsive experience.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "API",
+        "CSS",
+        "SASS",
+        "Git",
+        "Vite",
+      ],
+      url: "https://sagnik-coder24.github.io/Box-Office/",
+      gh: "https://github.com/Sagnik-Coder24/Box-Office",
+      img: box,
+    },
+    {
+      title: "YouTube Channel Explorer",
+      description:
+        "The YouTube Channel Explorer is a React and Vite web app that lets users search YouTube channels, view latest videos, and customize display options. With real-time data from the YouTube Data API, it offers a clean, responsive design for a seamless experience across devices. Ideal for practicing API integration, React, and responsive design.",
+      technologies: ["React", "JavaScript", "API", "CSS", "Vite"],
+      url: "https://you-tube-channel-explore.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/You-Tube",
+      img: yt,
+    },
+    {
+      title: "U-Survey",
+      description:
+        "U-Survey is a React-based survey app that uses Firebase for authentication, real-time data storage, and hosting. Users can fill out surveys, submit responses, and view real-time updates, all within a clean, responsive design for a smooth, cross-device experience.",
+      technologies: ["React", "JavaScript", "Firebase", "HTML", "CSS", "Vite"],
+      url: "https://usurvey-b4085.web.app/",
+      gh: "https://github.com/Sagnik-Coder24/U-Survey",
+      medium:
+        "https://blog.stackademic.com/integrating-firebase-with-react-for-the-u-survey-app-a-comprehensive-guide-5232aa524d62",
+      img: us,
+    },
+    {
+      title: "GitHub Profile Searcher with Auth0 and GitHub API",
+      description:
+        "GitHub Profile Searcher is a React app that allows users to search GitHub profiles by username or name, displaying details like repositories, followers, and following. With Auth0 for secure authentication and the GitHub API for data retrieval, the app ensures a smooth, responsive experience across devices using Bootstrap.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "API",
+        "Bootstrap",
+        "HTML",
+        "CSS",
+        "Vite",
+        "GitHub",
+      ],
+      url: "https://github-searcher-auth0.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/auth0-github-api",
+      medium:
+        "https://blog.stackademic.com/building-a-secure-github-profile-searcher-with-react-auth0-and-github-api-651ddc98c5d5",
+      img: gh,
+    },
+    {
+      title: "Chat App",
+      description:
+        "Chat-App is a real-time messaging app built with React and Firebase, featuring instant message sync, secure authentication, and dynamic chat rooms for a seamless multi-device experience. This project enhanced my skills in frontend-backend integration, real-time data handling, and responsive design.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "Firebase",
+        "HTML",
+        "CSS",
+        "SASS",
+        "Git",
+      ],
+      url: "https://chat-web-app-1539f.web.app/",
+      gh: "https://github.com/Sagnik-Coder24/Chat-App",
+      img: chapp,
+    },
+    {
+      title: "To-Do Task Manager with Redux",
+      description:
+        "A React + Vite task management app using Redux Toolkit for state management. Users can add, edit, complete, and delete tasks, with a clean, responsive design in CSS. This app demonstrates Redux’s efficiency in managing global state for an intuitive user experience.",
+      technologies: ["React", "Redux", "JavaScript", "HTML", "CSS", "Vite"],
+      url: "https://to-do-app-redux-clean.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/To-do-app-Redux",
+      medium:
+        "https://blog.stackademic.com/my-journey-of-learning-redux-from-core-to-redux-toolkit-and-building-a-to-do-app-1c7f6156a08c",
+      img: todor,
+    },
+    {
+      title: "E-Commerce App with React & Redux",
+      description:
+        "Ecommerce-Redux is a modern React + Vite fashion eCommerce app that enables users to browse, filter, and purchase clothing seamlessly. Built with Redux Toolkit for state management, it features user authentication, a dynamic catalog, interactive cart, and intuitive checkout. Styled with Tailwind CSS for responsiveness, it offers advanced filters by size, color, and gender. Deployed on Netlify, this app combines powerful tools with a user-friendly shopping experience.",
+      technologies: [
+        "React",
+        "Redux",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Git",
+        "Vite",
+      ],
+      url: "https://ecommerce-fashion-redux.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/Ecommerce-Redux",
+      img: ecom,
+    },
   ],
   languages: [
     {
       language: "English",
+      proficiency: "Professional Fluency",
+    },
+    {
+      language: "Hindi",
+      proficiency: "Professional Fluency",
+    },
+    {
+      language: "Bengali",
       proficiency: "Native",
-    },
-    {
-      language: "Spanish",
-      proficiency: "Fluent",
-    },
-  ],
-  awards: [
-    {
-      title: "Employee of the Year",
-      organization: "Tech Innovators Inc.",
-      date: "2023-12-01",
-      description:
-        "Awarded for outstanding performance and leadership in delivering high-impact projects.",
-    },
-  ],
-  volunteer_experience: [
-    {
-      role: "Volunteer Web Developer",
-      organization: "Code for Good",
-      location: "San Francisco, CA",
-      start_date: "2021-05-01",
-      end_date: "Present",
-      description:
-        "Building and maintaining websites for non-profits to support their outreach efforts.",
     },
   ],
   interests: [
     "Artificial Intelligence",
     "Open Source Software",
-    "Tech Startups",
     "Traveling",
     "Photography",
+    "Coding",
+    "Gaming",
+    "Reading Books",
+    "Writing technical blogs",
   ],
   publications: [
     {
-      title: "Modern Web Development",
-      journal: "Tech Trends Journal",
-      date: "2023-03-15",
-      url: "https://www.example.com/publication",
+      title: "Exploring API Basics: Building a Reddit Search App with React",
+      journal: "Medium",
+      date: "Nov 4, 2024",
+      url: "https://blog.stackademic.com/exploring-api-basics-building-a-reddit-search-app-with-react-795e2a8fb7d7",
+      desc: "This blog covers the core concept of API fetching in web development, demonstrating how to interact with the Reddit API using React and Vite. It highlights two popular libraries, Axios and Superagent, for making API requests, allowing users to explore the differences between them. The project enables users to search for subreddits and view posts, providing a hands-on way to understand how to fetch data from external APIs and integrate it into React applications.",
     },
     {
-      title: "Exploring Microservices Architecture",
-      journal: "DevOps Insights",
-      date: "2022-08-10",
-      url: "https://www.example.com/publication-2",
+      title: "Integrating Firebase with React: A Comprehensive Guide",
+      journal: "Medium",
+      date: "Nov 6, 2024",
+      url: "https://medium.com/stackademic/integrating-firebase-with-react-for-the-u-survey-app-a-comprehensive-guide-5232aa524d62",
+      desc: "This blog walks you through integrating Firebase with a simple React app, U-Survey. It covers setting up Firebase Authentication for user sign-ins, using the Realtime Database to store survey responses, and deploying the app with Firebase Hosting. The tutorial shows how Firebase makes it easy to add powerful backend features without the hassle of managing servers, so you can focus on building your app.",
+    },
+    {
+      title:
+        "My Journey of Learning Redux: From Core to Redux Toolkit and Building a To-Do App",
+      journal: "Medium",
+      date: "Nov 7, 2024",
+      url: "https://medium.com/stackademic/my-journey-of-learning-redux-from-core-to-redux-toolkit-and-building-a-to-do-app-1c7f6156a08c",
+      desc: "The blog takes readers through the process of mastering state management in React using Redux. It starts with the challenges of managing state in complex apps and reveals how Redux, along with Redux Toolkit and React-Redux, can offer a more efficient solution. To cement the learning, a practical project is built—showcasing the power of Redux in action. Curious about the app and the technologies behind it? Read it to find out how everything comes together.",
+    },
+    {
+      title:
+        "Understanding React’s useReducer Hook: A Deep Dive into State Management",
+      journal: "Medium",
+      date: "Nov 8, 2024",
+      url: "https://blog.stackademic.com/understanding-reacts-usereducer-hook-a-deep-dive-into-state-management-94c0b08d13ab",
+      desc: "This blog explains the useReducer hook in React, a powerful tool for managing complex state logic in a clean and predictable way. It covers the basics of how useReducer works, provides an example with a counter app, and compares it to useState for simpler state updates. The blog also explores when to use useReducer over Redux, highlighting key differences and use cases for both. It concludes with a live demo app showcasing the use of useReducer and practical insights for developers looking to manage state effectively in React applications.",
+    },
+    {
+      title:
+        "Enabling the “Install” Experience in a React + Vite Web App: A PWA Guide",
+      journal: "Medium",
+      date: "Nov 22, 2024",
+      url: "https://link.medium.com/B6AZikfJJOb",
+      desc: "This blog contains a step-by-step guide on how to make your React + Vite web app installable as a Progressive Web App (PWA). It covers setting up a service worker, configuring the manifest, and enabling the install prompt to provide users with a seamless, app-like experience.",
     },
   ],
 };
