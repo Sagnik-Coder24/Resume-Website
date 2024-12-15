@@ -30,10 +30,10 @@ import ecom from "./images/ecom.jpeg";
 
 export default {
   personal_info: {
-    name: "Sagnik Ghosh",
+    name: "SAGNIK GHOSH",
     title: "Associate at Cognizant",
     headline:
-      "Aspiring Full Stack Developer with 2+ years of experience, a strong passion for DSA, problem-solving, and a commitment to lifelong learning.",
+      "Aspiring Full Stack Developer with 2+ years of experience, a strong passion for DSA, problem-solving, and a commitment to lifelong learning",
     location: {
       city: "Kolkata",
       state: "West Bengal",
