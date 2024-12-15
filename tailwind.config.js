@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        neonGreen: "#39FF14", // This defines neon green as #39FF14
+      },
       screens: {
         "custom-xlg": "1400px",
       },

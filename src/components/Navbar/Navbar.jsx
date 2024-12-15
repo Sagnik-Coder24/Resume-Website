@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       ref={dropdownRef}
-      className="bg-gray-900 text-violet-200 py-4 shadow-lg"
+      className="bg-gray-900 text-violet-200 py-4 shadow-lg border-b-2 border-purple-600"
     >
       <div className="px-6 flex justify-between items-center">
         <div className="text-xl font-semibold z-20">
@@ -48,55 +48,55 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:flex space-x-6 text-sm">
-          <Link to="#summary" className="hover:text-purple-400 hover:underline">
+          <Link to="/summary" className="hover:text-purple-400 hover:underline">
             Summary
           </Link>
-          <Link to="#skills" className="hover:text-purple-400 hover:underline">
+          <Link to="/skills" className="hover:text-purple-400 hover:underline">
             Skills
           </Link>
           <Link
-            to="#experience"
+            to="/experience"
             className="hover:text-purple-400 hover:underline"
           >
             Experience
           </Link>
           <Link
-            to="#education"
+            to="/education"
             className="hover:text-purple-400 hover:underline"
           >
             Education
           </Link>
           <Link
-            to="#certifications"
+            to="/certifications"
             className="hover:text-purple-400 hover:underline"
           >
             Certifications
           </Link>
           <Link
-            to="#projects"
+            to="/projects"
             className="hover:text-purple-400 hover:underline"
           >
             Projects
           </Link>
           <Link
-            to="#interests"
+            to="/interests"
             className="hover:text-purple-400 hover:underline"
           >
             Interests
           </Link>
           <Link
-            to="#languages"
+            to="/languages"
             className="hover:text-purple-400 hover:underline"
           >
             Languages
           </Link>
           <Link
-            to="#publications"
+            to="/publications"
             className="hover:text-purple-400 hover:underline"
           >
             Publications
           </Link>
-          <Link to="#contact" className="hover:text-purple-400 hover:underline">
+          <Link to="/contact" className="hover:text-purple-400 hover:underline">
             Contact Me
           </Link>
         </div>
@@ -123,61 +123,61 @@ const Navbar = () => {
           }`}
         >
           <Link
-            to="#summary"
+            to="/summary"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Summary
           </Link>
           <Link
-            to="#skills"
+            to="/skills"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Skills
           </Link>
           <Link
-            to="#experience"
+            to="/experience"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Experience
           </Link>
           <Link
-            to="#education"
+            to="/education"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Education
           </Link>
           <Link
-            to="#certifications"
+            to="/certifications"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Certifications
           </Link>
           <Link
-            to="#projects"
+            to="/projects"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Projects
           </Link>
           <Link
-            to="#interests"
+            to="/interests"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Interests
           </Link>
           <Link
-            to="#languages"
+            to="/languages"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Languages
           </Link>
           <Link
-            to="#publications"
+            to="/publications"
             className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
           >
             Publications
           </Link>
           <Link
-            to="#contact"
+            to="/contact"
             className="block hover:text-purple-400 hover:underline w-[10px] whitespace-nowrap -translate-x-5"
           >
             Contact Me
