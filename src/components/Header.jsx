@@ -7,18 +7,20 @@ import github from "../assets/images/icons/github.png";
 import twitter from "../assets/images/icons/twitter.png";
 import medium from "../assets/images/icons/medium.png";
 import LC from "../assets/images/icons/LC.png";
+import Button from "./Button/Button";
+import { Link } from "react-router-dom";
 
 const Header = ({ pic, name, title, headline, contact, location }) => {
   return (
-    <div className="h-[90vh] flex justify-center items-center pt-4">
+    <div className="min-h-[90vh] flex justify-center items-center pt-4">
       <div className="w-full custom-xlg:w-4/6 h-auto">
-        <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12">
+        <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12 md:pt-16">
           {/* Left Side Content */}
           <div className="h-auto w-full md:w-1/2 mb-6 md:mb-0 animate-fadeIn">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+            <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
               Hello 👋, I am
             </h1>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+            <h1 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
               {name}
             </h1>
             <div className="mt-6 text-violet-200 tracking-wide leading-normal">
@@ -29,17 +31,26 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
 
           {/* Right Side Image */}
           <div className="p-4 h-auto">
-            <div className="relative w-52 md:w-56 mx-auto transition-transform transform hover:scale-105 ease-in-out animate-scaleUp select-none">
+            <div className="relative w-52 md:w-56 mx-auto transition-transform transform hover:scale-105 duration-300 ease-in-out animate-scaleUp select-none">
               <img
                 src={pic}
                 alt="Profile"
-                className="w-full h-full rounded-3xl border-2 p-2 border-purple-600"
+                className="w-full h-full rounded-3xl border-2 p-2 border-purple-600 shadow-lg shadow-purple-400 hover:shadow-2xl hover:shadow-purple-400 duration-300 ease-in-out"
               />
             </div>
           </div>
         </div>
         <div>
-          <div className="w-4/5 mx-auto mt-44 flex justify-center text-purple-400">
+          <div className="w-full flex justify-center flex-wrap gap-8 md:gap-12 space-x-4 mt-7 md:mt-11 px-2">
+            <Link to="/summary">
+              <Button text="More Details" />
+            </Link>
+            <Button text="Download CV" />
+            <Link to="/contact">
+              <Button text="Contact Me" />
+            </Link>
+          </div>
+          <div className="w-4/5 mx-auto mt-20 md:mt-36 flex justify-center text-purple-400">
             <p>Let's Connect! Find Me on Social Media</p>
           </div>
           <hr className="border-t-2 border-purple-400 w-[283px] mx-auto mt-2 mb-2" />

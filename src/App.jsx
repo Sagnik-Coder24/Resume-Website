@@ -58,14 +58,6 @@ function App() {
             element={<Projects projects={data.projects} />}
           />
           <Route
-            path="/interests"
-            element={<Interests interests={data.interests} />}
-          />
-          <Route
-            path="/languages"
-            element={<Languages languages={data.languages} />}
-          />
-          <Route
             path="/publications"
             element={<Publications publications={data.publications} />}
           />
