@@ -59,7 +59,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={`mailto:${contact.email}`}
                 target="_blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={gmail}
@@ -72,7 +72,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={contact.linkedin}
                 target="_blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={linkedin}
@@ -85,7 +85,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={contact.github}
                 target="_blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={github}
@@ -98,7 +98,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={contact.twitter}
                 target="_blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={twitter}
@@ -111,7 +111,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={contact.medium}
                 target="__blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={medium}
@@ -124,7 +124,7 @@ const Header = ({ pic, name, title, headline, contact, location }) => {
               <a
                 href={contact.leetcode}
                 target="__blank"
-                className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <img
                   src={LC}

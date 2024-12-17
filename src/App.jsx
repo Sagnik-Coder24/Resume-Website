@@ -39,7 +39,16 @@ function App() {
               />
             }
           />
-          <Route path="/summary" element={<Summary summary={data.summary} />} />
+          <Route
+            path="/summary"
+            element={
+              <Summary
+                summary={data.summary}
+                interests={data.interests}
+                languages={data.languages}
+              />
+            }
+          />
           <Route path="/skills" element={<Skills skills={data.skills} />} />
           <Route
             path="/experience"
