@@ -50,8 +50,17 @@ export default {
     },
     profile_picture: profile_pic,
   },
-  summary:
-    "As a Software Engineer at Cognizant, I am passionate about coding 💻 and dedicated to continuous learning 📚. Every day, I focus on refining my technical skills and growing as a software engineer. Currently, I am focused on mastering the MERN stack (MongoDB, Express, React, Node.js) and deepening my understanding of Data Structures & Algorithms (DSA) 🔍, which I consider essential for building efficient, scalable solutions ⚙️. I have solved over 100 problems on platforms like Leetcode, significantly strengthening my problem-solving abilities.\n\nWith hands-on experience in React and Frontend Development 🌐, I thrive on tackling complex challenges and contributing to innovative projects 🚀. My strong problem-solving mindset 🧠, combined with my ability to quickly adapt to new technologies 🔄, drives my commitment to staying ahead of trends in the tech industry. I am eager to collaborate with like-minded professionals to create impactful solutions that address real-world problems and deliver lasting value.\n\nOutside of work, I enjoy working out 🏋️‍♂️, photography 📸, gaming 🎮, and, of course, coding — always exploring new ways to grow both professionally and personally.",
+  summary: [
+    "Software Engineer at Cognizant with a passion for coding 💻 and continuous learning 📚.",
+    "Focused on mastering the MERN stack (MongoDB, Express, React, Node.js) 🔧.",
+    "Deepening understanding of Data Structures & Algorithms (DSA) 🔍 to build efficient, scalable solutions ⚙️.",
+    "Solved over 100 problems on platforms like Leetcode, enhancing problem-solving abilities 💡.",
+    "Hands-on experience in React and Frontend Development 🌐.",
+    "A strong problem-solver 🧠 who loves tackling challenges and quickly adapting to new technologies 🔄.",
+    "Committed to staying ahead of trends in the tech industry 📈.",
+    "Eager to collaborate with like-minded professionals on impactful solutions 🚀.",
+    "Enjoys working out 🏋️‍♂️, photography 📸, gaming 🎮, and exploring new ways to grow professionally and personally 🌱.",
+  ],
   skills: {
     "Programming Languages": [
       "JavaScript",

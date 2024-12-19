@@ -1,16 +1,37 @@
-// src/components/Summary.jsx
-import React, { useState } from "react";
-import LinedIn_Banner from "../assets/images/banners/LinedIn_Banner.png";
+import React, { useEffect, useState } from "react";
+import bg1 from "../assets/images/banners/bg1.jpg";
 import Languages from "./Languages";
 import Interests from "./Interests";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Summary = ({ summary, interests, languages }) => {
-  const [divId, setDivId] = useState(1);
+  const [divId, setDivId] = useState(
+    JSON.parse(sessionStorage.getItem("dot")) || 1
+  );
+
+  useEffect(() => {
+    const listItems = document.querySelectorAll(".purple-dot");
+    listItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.1}s`;
+    });
+  }, []);
 
   const compoArr = [
-    <section className="text-center p-6 animate-fadeIn">
-      <h2 className="text-3xl font-bold text-neonGreen">About Me</h2>
-      <p className="mt-4 text-gray-300 text-lg">{summary}</p>
+    <section className="text-center p-8 animate-fadeIn">
+      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+        ABOUT ME
+      </h1>
+      <ul className="mt-10 md:mt-8 text-purple-200 text-base list-inside text-left">
+        {summary.map((item, index) => (
+          <li key={index} className="purple-dot mt-6">
+            {item}
+          </li>
+        ))}
+      </ul>
     </section>,
     <Interests interests={interests} />,
     <Languages languages={languages} />,
@@ -18,78 +39,85 @@ const Summary = ({ summary, interests, languages }) => {
 
   const increaseDivId = () => {
     const n = compoArr.length;
-    if (divId === n) {
-      setDivId(1);
-    } else {
-      setDivId((p) => p + 1);
-    }
+    const res = divId === n ? 1 : divId + 1;
+    setDivId(res);
+    sessionStorage.setItem("dot", res);
   };
 
   const decreaseDivId = () => {
     const n = compoArr.length;
-    if (divId === 1) {
-      setDivId(compoArr.length);
-    } else {
-      setDivId((p) => p - 1);
-    }
+    const res = divId === 1 ? n : divId - 1;
+    setDivId(res);
+    sessionStorage.setItem("dot", res);
   };
 
   return (
-    <>
-      <div className="w-full max-h-screen absolute z-[-1]">
+    <div className="relative w-full min-h-[92vh] overflow-hidden select-none">
+      {/* Banner Image */}
+      <div className="w-full h-full absolute top-0 left-0 z-[-1]">
         <img
-          src={LinedIn_Banner}
-          alt=""
-          className="w-full opacity-40 object-cover"
+          src={bg1}
+          alt="Banner"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
 
-      <div className="w-3/4 mx-auto">
-        <div
-          className={`bg-red-500 w-full h-[70vh] rounded-3xl ${
-            1 === divId ? "" : "hidden"
-          }`}
-        ></div>
-        <div
-          className={`bg-blue-500 w-full h-[70vh] rounded-3xl ${
-            2 === divId ? "" : "hidden"
-          }`}
-        ></div>
-        <div
-          className={`bg-green-500 w-full h-[70vh] rounded-3xl ${
-            3 === divId ? "" : "hidden"
-          }`}
-        ></div>
+      {/* Main Content Container */}
+      <div className="w-11/12 sm:w-3/4 lg:w-1/2 bg-black bg-opacity-40 mx-auto mt-10 rounded-xl border-2 border-purple-800 h-[80vh] md:h-[36em] md:mt-32 overflow-y-auto custom-scrollbar">
+        {compoArr.map((item, index) => (
+          <div
+            key={index}
+            className={`${
+              index + 1 === divId ? "" : "hidden"
+            } transition-opacity duration-500 h-full`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
+
+      {/* Pagination Arrows */}
       <div
-        className="absolute top-56 right-80 rounded-full bg-gray-100 h-10 w-10 text-black cursor-pointer"
-        onClick={increaseDivId}
-      ></div>
-      <div
-        className="absolute top-56 left-80 rounded-full bg-gray-100 h-10 w-10 text-black cursor-pointer"
+        className="absolute top-1/2 left-6 lg:left-36 transform -translate-y-1/2 bg-black bg-opacity-40 border-2 border-purple-800 p-2 text-xs rounded-full cursor-pointer hover:bg-purple-800 transition-all"
         onClick={decreaseDivId}
-      ></div>
-      <div className="flex justify-center gap-4">
-        <div
-          className={`h-10 w-10 ${
-            1 === divId ? "bg-purple-800" : "bg-purple-400"
-          }  rounded-full cursor-pointer`}
-          onClick={() => setDivId(1)}
-        ></div>
-        <div
-          className={`h-10 w-10 ${
-            2 === divId ? "bg-purple-800" : "bg-purple-400"
-          }  rounded-full cursor-pointer`}
-          onClick={() => setDivId(2)}
-        ></div>
-        <div
-          className={`h-10 w-10 ${
-            3 === divId ? "bg-purple-800" : "bg-purple-400"
-          }  rounded-full cursor-pointer`}
-          onClick={() => setDivId(3)}
-        ></div>
+      >
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          size="lg"
+          className="text-purple-200"
+        />
       </div>
-    </>
+      <div
+        className="absolute top-1/2 right-6 lg:right-36 transform -translate-y-1/2 bg-black bg-opacity-40 border-2 border-purple-800 p-2 text-xs rounded-full cursor-pointer hover:bg-purple-800 transition-all"
+        onClick={increaseDivId}
+      >
+        <FontAwesomeIcon
+          icon={faChevronRight}
+          size="lg"
+          className="text-purple-200"
+        />
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center gap-8 mt-8 md:mt-10">
+        {compoArr.map((_, index) => (
+          <div
+            key={index}
+            className={`h-5 w-5 rounded-full cursor-pointer transition-all flex items-center justify-center text-violet-200 border-2 border-purple-800 text-xs p-4 select-none ${
+              index + 1 === divId ? "bg-purple-800 text-white" : ""
+            }`}
+            onClick={() => {
+              setDivId(index + 1);
+              sessionStorage.setItem("dot", index + 1);
+            }}
+          >
+            {index + 1}
+          </div>
+        ))}
+      </div>
+      <hr className="hidden lg:block  absolute top-1/2 left-0 w-[100px] border-t-2 border-purple-800 transform -translate-y-1/2" />
+      <hr className="hidden lg:block  absolute top-1/2 right-0 w-[100px] border-t-2 border-purple-800 transform -translate-y-1/2" />
+    </div>
   );
 };
 

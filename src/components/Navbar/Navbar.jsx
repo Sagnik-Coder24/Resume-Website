@@ -52,7 +52,7 @@ const Navbar = () => {
             SG
           </Link>
         </div>
-        <div className="hidden md:flex space-x-6 text-sm">
+        <div className="hidden md:flex space-x-6 lg:space-x-10 text-sm">
           <Link to="/skills" className="hover:text-purple-400 hover:underline">
             Skills
           </Link>

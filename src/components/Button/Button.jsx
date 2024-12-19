@@ -1,8 +1,12 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ text }) => {
-  return <button className="btn">{text}</button>;
+const Button = ({ text, width }) => {
+  return (
+    <button className="btn" style={width ? { width: width } : null}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

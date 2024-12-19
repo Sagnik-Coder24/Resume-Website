@@ -9,10 +9,18 @@ import medium from "../assets/images/icons/medium.png";
 import LC from "../assets/images/icons/LC.png";
 import Button from "./Button/Button";
 import { Link } from "react-router-dom";
+import bg2 from "../assets/images/banners/bg2.jpg";
 
 const Header = ({ pic, name, title, headline, contact, location }) => {
   return (
     <div className="min-h-[90vh] flex justify-center items-center pt-4">
+      <div className="w-full h-full absolute top-0 left-0 z-[-1]">
+        <img
+          src={bg2}
+          alt="Banner"
+          className="w-full h-full object-cover opacity-15"
+        />
+      </div>
       <div className="w-full custom-xlg:w-4/6 h-auto">
         <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12 md:pt-16">
           {/* Left Side Content */}

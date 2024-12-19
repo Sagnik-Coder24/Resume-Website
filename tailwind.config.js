@@ -16,7 +16,7 @@ module.exports = {
         gradientShift: "gradientShift 2s linear infinite",
         slideIn: "slideIn 1s ease-out",
         slideDown: "slideDown 300ms ease-out",
-        slideUp: "slideUp 300ms ease-in",
+        slideUp: "slideUp 0.5s ease-in",
         rotate: "rotate 2s linear infinite",
       },
       keyframes: {
@@ -47,8 +47,8 @@ module.exports = {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
         slideUp: {
-          "0%": { transform: "translateY(0%)", opacity: "1" },
-          "100%": { transform: "translateY(-100%)", opacity: "0" },
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" },
         },
         rotate: {
           "0%": { transform: "rotate(0deg)" },
