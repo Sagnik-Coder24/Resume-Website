@@ -10,8 +10,6 @@ import "./App.css";
 import Education from "./components/Education.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Projects from "./components/Projects.jsx";
-import Languages from "./components/Languages.jsx";
-import Interests from "./components/Interests.jsx";
 import Publications from "./components/Publications.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 
@@ -35,7 +33,6 @@ function App() {
                 title={data.personal_info.title}
                 headline={data.personal_info.headline}
                 contact={data.personal_info.contact_info}
-                location={data.personal_info.location}
               />
             }
           />
@@ -46,6 +43,7 @@ function App() {
                 summary={data.summary}
                 interests={data.interests}
                 languages={data.languages}
+                location={data.personal_info.location}
               />
             }
           />
@@ -60,7 +58,12 @@ function App() {
           />
           <Route
             path="/certifications"
-            element={<Certifications certifications={data.certifications} />}
+            element={
+              <Certifications
+                certifications={data.certifications.data}
+                link={data.certifications.link}
+              />
+            }
           />
           <Route
             path="/projects"

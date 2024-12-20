@@ -11,7 +11,6 @@
 
 ::-webkit-scrollbar-track {
   background-color: #c586ec; /* Purple-400 color */
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

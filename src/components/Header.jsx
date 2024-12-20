@@ -11,7 +11,7 @@ import Button from "./Button/Button";
 import { Link } from "react-router-dom";
 import bg2 from "../assets/images/banners/bg2.jpg";
 
-const Header = ({ pic, name, title, headline, contact, location }) => {
+const Header = ({ pic, name, title, headline, contact }) => {
   return (
     <div className="min-h-[90vh] flex justify-center items-center pt-4">
       <div className="w-full h-full absolute top-0 left-0 z-[-1]">

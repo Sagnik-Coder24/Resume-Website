@@ -7,8 +7,9 @@ import {
   faChevronRight,
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import Location from "./Location";
 
-const Summary = ({ summary, interests, languages }) => {
+const Summary = ({ summary, interests, languages, location }) => {
   const [divId, setDivId] = useState(
     JSON.parse(sessionStorage.getItem("dot")) || 1
   );
@@ -22,7 +23,7 @@ const Summary = ({ summary, interests, languages }) => {
 
   const compoArr = [
     <section className="text-center p-8 animate-fadeIn">
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
         ABOUT ME
       </h1>
       <ul className="mt-10 md:mt-8 text-purple-200 text-base list-inside text-left">
@@ -35,9 +36,14 @@ const Summary = ({ summary, interests, languages }) => {
     </section>,
     <Interests interests={interests} />,
     <Languages languages={languages} />,
+    <Location location={location} />,
   ];
 
   const increaseDivId = () => {
+    const div = document.getElementById("scrollable-div");
+    div.scrollTo({
+      top: 0,
+    });
     const n = compoArr.length;
     const res = divId === n ? 1 : divId + 1;
     setDivId(res);
@@ -45,6 +51,10 @@ const Summary = ({ summary, interests, languages }) => {
   };
 
   const decreaseDivId = () => {
+    const div = document.getElementById("scrollable-div");
+    div.scrollTo({
+      top: 0,
+    });
     const n = compoArr.length;
     const res = divId === 1 ? n : divId - 1;
     setDivId(res);
@@ -63,7 +73,10 @@ const Summary = ({ summary, interests, languages }) => {
       </div>
 
       {/* Main Content Container */}
-      <div className="w-11/12 sm:w-3/4 lg:w-1/2 bg-black bg-opacity-40 mx-auto mt-10 rounded-xl border-2 border-purple-800 h-[80vh] md:h-[36em] md:mt-32 overflow-y-auto custom-scrollbar">
+      <div
+        id="scrollable-div"
+        className="w-11/12 sm:w-3/4 lg:w-1/2 bg-black bg-opacity-40 mx-auto mt-10 rounded-xl border-2 border-purple-800 h-[80vh] md:h-[36em] md:mt-32 overflow-y-auto custom-scrollbar"
+      >
         {compoArr.map((item, index) => (
           <div
             key={index}
@@ -107,6 +120,10 @@ const Summary = ({ summary, interests, languages }) => {
               index + 1 === divId ? "bg-purple-800 text-white" : ""
             }`}
             onClick={() => {
+              const div = document.getElementById("scrollable-div");
+              div.scrollTo({
+                top: 0,
+              });
               setDivId(index + 1);
               sessionStorage.setItem("dot", index + 1);
             }}

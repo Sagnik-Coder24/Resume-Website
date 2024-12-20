@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Languages = ({ languages }) => {
   return (
     <section className="text-center p-12 animate-fadeIn h-full">
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
         LANGUAGES
       </h1>
       <div className="my-4 space-y-8 h-[93%] flex flex-col justify-evenly lg:items-center">
