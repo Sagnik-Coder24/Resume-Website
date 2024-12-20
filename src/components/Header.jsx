@@ -18,7 +18,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
         <img
           src={bg2}
           alt="Banner"
-          className="w-full h-full object-cover opacity-15"
+          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
         />
       </div>
       <div className="w-full custom-xlg:w-4/6 h-auto">

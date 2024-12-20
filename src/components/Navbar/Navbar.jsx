@@ -106,7 +106,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           className={`absolute w-full z-10 flex flex-col justify-center items-center md:hidden bg-gray-900 text-violet-200 p-6 space-y-4 overflow-hidden rounded-b-3xl shadow-2xl ${
-            anime ? "animate-slideDown" : "animate-slideUp"
+            anime ? "animate-slideDown" : "animate-slideUpNav"
           }`}
         >
           <Link

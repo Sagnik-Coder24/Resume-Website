@@ -5,11 +5,15 @@ import html from "./images/html.jpeg";
 import rdd from "./images/rdd.jpeg";
 import js from "./images/js.jpeg";
 import java from "./images/java.jpeg";
+import java2 from "./images/java2.jpg";
 import mvc from "./images/mvc.jpeg";
+import spring from "./images/spring.jpg";
+import postgre from "./images/postgre.jpg";
 import api from "./images/api.jpeg";
 import sql2 from "./images/sql.jpeg";
 import dbms from "./images/dbms.jpeg";
 import ai from "./images/ai.jpeg";
+import ai2 from "./images/ai2.jpg";
 import pl from "./images/pl.jpeg";
 import react from "./images/react.jpeg";
 import redux from "./images/redux.jpeg";
@@ -295,6 +299,7 @@ export default {
       {
         img: react_is,
         title: "React Training",
+        skills: ["React"],
         organization: "Internshala Trainings",
         date: "Sep 2021",
         url: "https://trainings.internshala.com/s/v/132756/72774ffd",
@@ -302,6 +307,7 @@ export default {
       {
         img: sql,
         title: "SQL for Beginners",
+        skills: ["SQL"],
         organization: "Udemy",
         date: "Mar 2022",
         url: "https://ude.my/UC-8aede5dc-68eb-4e6c-a9d9-5df714ccc93a",
@@ -309,6 +315,7 @@ export default {
       {
         img: html,
         title: "Responsive Web Design",
+        skills: ["HTML", "CSS"],
         organization: "Udemy",
         date: "Mar 2022",
         url: "https://ude.my/UC-55cd2c51-4c97-45dd-b35f-09874788aebf",
@@ -316,6 +323,7 @@ export default {
       {
         img: rdd,
         title: "Relational Database Design",
+        skills: ["DBMS"],
         organization: "Udemy",
         date: "Mar 2022",
         url: "https://ude.my/UC-940507d9-d874-4892-93c4-d82711a387b1",
@@ -323,6 +331,7 @@ export default {
       {
         img: js,
         title: "JavaScript Basics",
+        skills: ["JS"],
         organization: "Udemy",
         date: "Mar 2022",
         url: "https://ude.my/UC-532a0cde-c0e1-4174-82f9-6beedfd56e3a",
@@ -330,6 +339,7 @@ export default {
       {
         img: java,
         title: "Core Java Made Easy",
+        skills: ["JAVA"],
         organization: "Udemy",
         date: "Apr 2022",
         url: "https://www.ude.my/UC-a6f0de4c-210d-4969-9363-3cf544c8037f",
@@ -337,20 +347,47 @@ export default {
       {
         img: mvc,
         title: "Spring MVC",
+        skills: ["JAVA", "Spring"],
         organization: "Udemy",
         date: "May 2022",
         url: "https://ude.my/UC-bc538abf-a375-42e8-81bc-a8e0d7747bbf",
       },
       {
+        img: spring,
+        title: "Spring Framework In Easy Steps",
+        skills: ["Spring"],
+        organization: "Udemy",
+        date: "Aug 2022",
+        url: "https://ude.my/UC-443b62da-3891-420e-a3f3-86d5d9719542",
+      },
+      {
+        img: postgre,
+        title: "SQL and PostgreSQL",
+        skills: ["SQL"],
+        organization: "Udemy",
+        date: "Aug 2022",
+        url: "https://ude.my/UC-0353ef54-d7c9-475e-a13e-9624f68fdeb0",
+      },
+      {
         img: api,
         title: "REST APIs with Postman",
+        skills: ["API"],
         organization: "Udemy",
         date: "Aug 2022",
         url: "https://ude.my/UC-faecb1b3-713c-41e6-b2e4-e3638fecd10f",
       },
       {
+        img: java2,
+        title: "Java Course for Complete Beginners",
+        skills: ["JAVA"],
+        organization: "Udemy",
+        date: "Aug 2022",
+        url: "https://ude.my/UC-0bc7a48b-7ac5-49df-904b-6b553d3be8d2/",
+      },
+      {
         img: sql2,
         title: "The Complete Oracle SQL Certification Course",
+        skills: ["SQL"],
         organization: "Udemy",
         date: "Oct 2022",
         url: "https://ude.my/UC-10b45f2c-7ba5-4d80-9771-dfe1d2008c67",
@@ -358,6 +395,7 @@ export default {
       {
         img: dbms,
         title: "Database Management System",
+        skills: ["DBMS"],
         organization: "Udemy",
         date: "Aug 2023",
         url: "https://ude.my/UC-8dc051cf-b65d-4f96-9af0-76e228167338",
@@ -365,27 +403,39 @@ export default {
       {
         img: ai,
         title: "Complete ChatGPT Course",
+        skills: ["Gen-AI"],
         organization: "Udemy",
         date: "May 2024",
         url: "https://ude.my/UC-6291e84e-f411-40c8-8a65-ac82313531f6",
       },
       {
+        img: ai2,
+        title: "Executive Briefing: AI + ChatGPT",
+        skills: ["Gen-AI"],
+        organization: "Udemy",
+        date: "Apr 2024",
+        url: "https://ude.my/UC-9851c3f0-9005-4a8c-aa77-684261117a1e",
+      },
+      {
         img: pl,
-        title: "Beginner to Advanced PL/ SQL",
+        title: "Beginner to Advanced PL/SQL",
+        skills: ["SQL"],
         organization: "Udemy",
         date: "Sep 2024",
         url: "https://ude.my/UC-4636347e-955d-410d-8ac8-89f9a6f6953e",
       },
       {
-        img: react,
-        title: "The Ultimate Redux Course 2023",
+        img: redux,
+        title: "The Ultimate Redux Course",
+        skills: ["Redux", "React"],
         organization: "Udemy",
         date: "Oct 2024",
         url: "https://ude.my/UC-044bf1f4-c6e5-4b20-ac24-30d3457920b1",
       },
       {
-        img: redux,
+        img: react,
         title: "Complete React JS web developer with ES6",
+        skills: ["React"],
         organization: "Udemy",
         date: "Oct 2024",
         url: "https://ude.my/UC-515494f3-15cb-40b7-8112-0f2170df6ce2",
