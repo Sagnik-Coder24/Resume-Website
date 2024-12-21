@@ -61,18 +61,18 @@ const Certifications = ({ certifications, link }) => {
         ))}
       </div>
 
-      <div className="mt-12 flex flex-wrap justify-center items-center gap-x-24 gap-y-10 animate-slideIn">
+      <div className="mt-12 flex flex-wrap justify-evenly items-center gap-x-24 gap-y-10 animate-slideIn">
         {certificates.map((cert, index) => (
           <div
             key={index}
-            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px]"
+            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg hover:shadow-lg hover:shadow-purple-400 transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px]"
           >
             <a href={cert.url} target="_blank" rel="noopener noreferrer">
               <div className="relative mb-6 select-none">
                 <img
                   src={cert.img}
                   alt={cert.title}
-                  className="w-full h-48 object-cover rounded-lg border-4 border-purple-600 shadow-lg hover:shadow-2xl transform transition-all ease-in-out duration-300"
+                  className="w-full h-48 object-cover rounded-lg border-4 border-purple-600 hover:shadow-2xl transform transition-all ease-in-out duration-300"
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-purple-950 bg-opacity-70 rounded-lg transition-all duration-300">
                   <p className="text-purple-100 text-lg font-semibold">
@@ -83,7 +83,7 @@ const Certifications = ({ certifications, link }) => {
             </a>
             <div className="h-[90px] flex justify-center items-center">
               <div className="">
-                <h3 className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
+                <h3 className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-none">
                   {cert.title}
                 </h3>
                 <p className="text-sm text-purple-100 opacity-60 tracking-wide leading-relaxed mt-2 capitalize">
