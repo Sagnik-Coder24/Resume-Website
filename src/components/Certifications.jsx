@@ -95,7 +95,7 @@ const Certifications = ({ certifications, link }) => {
           </div>
         ))}
       </div>
-      <div className="mt-16">
+      <div className="mt-16 animate-slideIn">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <Button text={"View All Certificates"} />
         </a>

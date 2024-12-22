@@ -2,12 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
 
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [anime, setAnime] = useState(false);
   const dropdownRef = useRef(null);
+
+  const { pathname } = useLocation();
 
   const toggleMenu = () => {
     setAnime(!anime);
@@ -53,36 +55,51 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden md:flex space-x-6 lg:space-x-10 text-sm">
-          <Link to="/skills" className="hover:text-purple-400 hover:underline">
+          <Link
+            to="/skills"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/skills" && "text-purple-400"
+            }`}
+          >
             Skills
           </Link>
           <Link
             to="/experience"
-            className="hover:text-purple-400 hover:underline"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/experience" && "text-purple-400"
+            }`}
           >
             Experience
           </Link>
           <Link
             to="/education"
-            className="hover:text-purple-400 hover:underline"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/education" && "text-purple-400"
+            }`}
           >
             Education
           </Link>
           <Link
             to="/certifications"
-            className="hover:text-purple-400 hover:underline"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/certifications" && "text-purple-400"
+            }`}
           >
             Certifications
           </Link>
           <Link
             to="/projects"
-            className="hover:text-purple-400 hover:underline"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/projects" && "text-purple-400"
+            }`}
           >
             Projects
           </Link>
           <Link
             to="/publications"
-            className="hover:text-purple-400 hover:underline"
+            className={`hover:text-purple-400 hover:underline ${
+              pathname === "/publications" && "text-purple-400"
+            }`}
           >
             Publications
           </Link>
@@ -111,42 +128,54 @@ const Navbar = () => {
         >
           <Link
             to="/skills"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/skills" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Skills
           </Link>
           <Link
             to="/experience"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/experience" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Experience
           </Link>
           <Link
             to="/education"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/education" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Education
           </Link>
           <Link
             to="/certifications"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/certifications" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Certifications
           </Link>
           <Link
             to="/projects"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/projects" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Projects
           </Link>
           <Link
             to="/publications"
-            className="block hover:text-purple-400 hover:underline w-[10px] -translate-x-5"
+            className={`block hover:text-purple-400 hover:underline w-[10px] -translate-x-5 ${
+              pathname === "/publications" && "text-purple-400"
+            }`}
             onClick={toggleMenu}
           >
             Publications

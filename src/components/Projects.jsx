@@ -4,8 +4,12 @@ import bg2 from "../assets/images/banners/bg2.jpg";
 const Projects = ({ projects }) => {
   const reverseProjects = [...projects].reverse();
 
+  const projClicked = (project) => {
+    console.log(project);
+  };
+
   return (
-    <section className="text-center p-6 animate-fadeIn">
+    <section className="text-center py-10 px-14">
       <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
         <img
           src={bg2}
@@ -14,37 +18,45 @@ const Projects = ({ projects }) => {
         />
       </div>
 
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
+      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none animate-slideUp">
         PROJECTS
       </h1>
 
-      <div className="mt-12 flex flex-wrap justify-evenly items-center gap-x-14 gap-y-10">
+      <div className="mt-12 flex flex-wrap justify-evenly items-start gap-x-14 gap-y-10 animate-slideUp">
         {reverseProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg w-[360px] h-[670px]"
+            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg w-[360px] h-[710px] cursor-pointer"
+            onClick={() => projClicked(project)}
           >
             <img
               src={project.img}
               alt={project.title}
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-lg font-semibold text-neonGreen h-[60px]">
-              {project.title}
-            </h3>
-            <p className="text-gray-400 text-sm text-left mt-2 h-[250px] overflow-y-auto custom-scrollbar">
-              {project.description}
-            </p>
-            <p className="text-sm mt-2">
-              <span className="font-semibold">Technologies:</span>{" "}
-              {project.technologies.join(", ")}
-            </p>
-            <div className="mt-4">
+            <div className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-none h-[80px] flex justify-center items-center">
+              <p>{project.title}</p>
+            </div>
+            <div className="text-purple-300 text-sm text-left mt-3 h-[210px] overflow-y-auto custom-scrollbar flex justify-center items-center tracking-normal leading-normal">
+              <p className="">{project.description}</p>
+            </div>
+            <div className="mt-10 flex justify-center items-center gap-1 flex-wrap text-xs text-purple-200 whitespace-nowrap">
+              {project.technologies.map((skill, index) => (
+                <div
+                  key={index}
+                  className="py-1 px-4 border-2 border-purple-600 rounded-full bg-purple-950 bg-opacity-40"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8">
               <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-500"
+                className="text-purple-300 hover:text-purple-400"
               >
                 Live
               </a>
@@ -53,7 +65,7 @@ const Projects = ({ projects }) => {
                 href={project.gh}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-500"
+                className="text-purple-300 hover:text-purple-400"
               >
                 GitHub
               </a>
@@ -64,7 +76,7 @@ const Projects = ({ projects }) => {
                     href={project.medium}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-400 hover:text-green-500"
+                    className="text-purple-300 hover:text-purple-400"
                   >
                     Medium
                   </a>
