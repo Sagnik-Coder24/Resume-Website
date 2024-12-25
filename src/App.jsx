@@ -9,7 +9,7 @@ import "./index.css";
 import "./App.css";
 import Education from "./components/Education.jsx";
 import Certifications from "./components/Certifications.jsx";
-import Projects from "./components/Projects.jsx";
+import Projects from "./components/Projects/Projects.jsx";
 import Publications from "./components/Publications.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 
@@ -67,7 +67,12 @@ function App() {
           />
           <Route
             path="/projects"
-            element={<Projects projects={data.projects} />}
+            element={
+              <Projects
+                projects={data.projects}
+                gh={data.personal_info.contact_info.github}
+              />
+            }
           />
           <Route
             path="/publications"

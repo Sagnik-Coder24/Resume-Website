@@ -661,7 +661,7 @@ export default {
     },
     {
       title:
-        "Understanding React’s useReducer Hook: A Deep Dive into State Management",
+        "Understanding React's useReducer Hook: A Deep Dive into State Management",
       journal: "Medium",
       date: "Nov 8, 2024",
       url: "https://blog.stackademic.com/understanding-reacts-usereducer-hook-a-deep-dive-into-state-management-94c0b08d13ab",
