@@ -76,7 +76,12 @@ function App() {
           />
           <Route
             path="/publications"
-            element={<Publications publications={data.publications} />}
+            element={
+              <Publications
+                publications={data.publications}
+                medium={data.personal_info.contact_info.medium}
+              />
+            }
           />
           <Route path="/contact" element={<ContactMe />} />
 

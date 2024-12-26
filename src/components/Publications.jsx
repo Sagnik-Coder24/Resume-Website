@@ -1,30 +1,53 @@
-// src/components/Publications.jsx
 import React from "react";
+import bg2 from "../assets/images/banners/bg2.jpg";
+import Button from "./Button/Button";
 
-const Publications = ({ publications }) => {
+const Publications = ({ publications, medium }) => {
+  const reversePublications = [...publications].reverse();
+
   return (
-    <section className="text-center p-6 animate-fadeIn">
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase">
-        Publications
-      </h1>
-      <div className="mt-6">
-        {publications.map((publication, index) => (
+    <section className="text-center py-8 px-6 sm:py-10 sm:px-14 animate-fadeIn overflow-x-hidden">
+      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
+        <img
+          src={bg2}
+          alt="Banner"
+          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
+        />
+      </div>
+
+      <div className="flex justify-center items-center">
+        <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-purple-500 to-violet-500 select-none uppercase animate-slideIn">
+          Public
+        </h1>
+        <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-violet-500 to-pink-500 select-none uppercase animate-slideLeft">
+          ations
+        </h1>
+      </div>
+
+      <div className="mt-12 flex justify-center items-center flex-col">
+        {reversePublications.map((publication, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg mb-6"
+            className={`bg-purple-950 bg-opacity-40 border-2 border-purple-600 border-opacity-40 py-6 px-8 rounded-lg mb-8 lg:w-3/4
+              ${
+                index % 2 === 0
+                  ? "md:mr-auto animate-slideIn"
+                  : "md:ml-auto animate-slideLeft"
+              }`}
           >
-            <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal mb-6">
+            <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal">
               <p>{publication.title}</p>
             </div>
 
-            <p className="text-gray-400 mt-2">
-              <span className="font-semibold text-gray-300">
-                {publication.journal}
-              </span>{" "}
-              | {publication.date}
+            <p className="text-purple-300 opacity-90 text-base mt-4">
+              <span className="font-semibold">{publication.journal}</span>
+              <span className="mx-4 text-purple-500">|</span>
+              <span>{publication.date}</span>
             </p>
-            <p className="text-gray-400 mt-2">{publication.desc}</p>
-            <div className="mt-4">
+            <p className="mt-4 text-left text-purple-200 opacity-70 text-sm sm:text-base tracking-normal leading-normal">
+              {publication.desc}
+            </p>
+            <div className="mt-6">
               <a
                 href={publication.url}
                 target="_blank"
@@ -36,6 +59,11 @@ const Publications = ({ publications }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-6 animate-slideIn">
+        <a href={medium} target="_blank" rel="noopener noreferrer">
+          <Button text={"Visit medium"} />
+        </a>
       </div>
     </section>
   );

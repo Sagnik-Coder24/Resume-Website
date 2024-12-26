@@ -15,6 +15,7 @@ module.exports = {
         bounce: "bounce 1s ease-in-out infinite",
         gradientShift: "gradientShift 2s linear infinite",
         slideIn: "slideIn 1s ease-out",
+        slideLeft: "slideLeft 1s ease-out",
         slideDown: "slideDown 300ms ease-out",
         slideUpNav: "slideUpNav 300ms ease-in",
         slideUp: "slideUp 0.5s ease-in",
@@ -40,8 +41,12 @@ module.exports = {
           "100%": { backgroundPosition: "100% 0%" },
         },
         slideIn: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideLeft: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         slideDown: {
           "0%": { transform: "translateY(-100%)", opacity: "0" },
