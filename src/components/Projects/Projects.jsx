@@ -9,7 +9,10 @@ const Projects = ({ projects, gh }) => {
   const [index, setIndex] = useState(null);
 
   const projClicked = (index) => {
-    setIndex(index);
+    setIndex(null);
+    setTimeout(() => {
+      setIndex(index);
+    }, 0);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
