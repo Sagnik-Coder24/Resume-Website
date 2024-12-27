@@ -1,16 +1,16 @@
 /* Styling for Webkit browsers (Chrome, Safari, Edge, Opera) */
 ::-webkit-scrollbar {
-  width: 8px; /* Slim width */
-  height: 8px; /* Slim height for horizontal scrollbar */
+  width: 4px; /* Slim width */
+  height: 4px; /* Slim height for horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #6b3fa0; /* Purple-800 color */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 100px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #c586ec; /* Purple-400 color */
+  background: transparent; /* Purple-400 color */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #a774d8; /* Lighter purple-400 on hover */
+  background: transparent; /* Lighter purple-400 on hover */
 }
 
 /* Webkit Browsers (Chrome, Safari, etc.) */
@@ -90,5 +90,22 @@ li.purple-dot::before {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+.indiv-certificate {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }

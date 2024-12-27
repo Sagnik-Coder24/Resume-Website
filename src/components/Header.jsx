@@ -31,9 +31,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <h1 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
               {name}
             </h1>
-            <div className="mt-6 text-violet-200 tracking-wide leading-normal">
-              <h2 className="text-xl font-bold">{title}</h2>
-              <p className="text-sm md:text-base mt-2 max-w-3xl">{headline}</p>
+            <div className="mt-6 tracking-wide leading-normal">
+              <h2 className="text-xl font-bold text-violet-300">{title}</h2>
+              <p className="text-sm md:text-base mt-2 max-w-3xl text-violet-200">
+                {headline}
+              </p>
             </div>
           </div>
 
@@ -49,7 +51,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
           </div>
         </div>
         <div>
-          <div className="w-full flex justify-center flex-wrap gap-8 md:gap-12 space-x-4 mt-7 md:mt-11 px-2">
+          <div className="w-full flex justify-center flex-wrap gap-8 md:gap-12 space-x-4 mt-7 md:mt-11 px-2 animate-fadeIn">
             <Link to="/summary">
               <Button text="More Details" />
             </Link>
@@ -58,16 +60,16 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <Button text="Contact Me" />
             </Link>
           </div>
-          <div className="w-4/5 mx-auto mt-20 md:mt-36 flex justify-center text-purple-400">
+          <div className="w-4/5 mx-auto mt-20 md:mt-36 flex justify-center text-purple-400 animate-scaleUp">
             <p>Let's Connect! Find Me on Social Media</p>
           </div>
-          <hr className="border-t-2 border-purple-400 w-[283px] mx-auto mt-2 mb-2" />
+          <hr className="border-t-2 border-purple-400 w-[283px] mx-auto mt-2 mb-2 animate-scaleUp" />
           <div className="flex flex-row justify-evenly items-center p-6 flex-wrap gap-4">
             <Tooltip placement="bottom" content="Email">
               <a
                 href={`mailto:${contact.email}`}
                 target="_blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={gmail}
@@ -80,7 +82,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <a
                 href={contact.linkedin}
                 target="_blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={linkedin}
@@ -93,7 +95,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <a
                 href={contact.github}
                 target="_blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={github}
@@ -106,7 +108,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <a
                 href={contact.twitter}
                 target="_blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={twitter}
@@ -119,7 +121,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <a
                 href={contact.medium}
                 target="__blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={medium}
@@ -132,7 +134,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <a
                 href={contact.leetcode}
                 target="__blank"
-                className="transform transition-transform duration-200 ease-in-out hover:scale-110"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
               >
                 <img
                   src={LC}
@@ -146,75 +148,6 @@ const Header = ({ pic, name, title, headline, contact }) => {
       </div>
     </div>
   );
-
-  // return (
-  //   <header className="text-center p-12 md:p-16 bg-gradient-to-r from-purple-700 via-blue-700 to-indigo-800 rounded-xl shadow-2xl relative overflow-hidden">
-  //     {/* Profile Image */}
-  //     <img
-  //       src={pic}
-  //       alt="Profile"
-  //       className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 shadow-lg transition-transform transform hover:scale-105"
-  //     />
-
-  //     {/* Name */}
-  //     <h1 className="text-5xl md:text-6xl font-extrabold text-white animate-fadeIn">
-  //       {name}
-  //     </h1>
-
-  //     {/* Title */}
-  //     <h2 className="text-2xl text-gray-300 mt-2">{title}</h2>
-
-  //     {/* Headline */}
-  //     <p className="text-lg md:text-xl text-gray-200 mt-4 max-w-3xl mx-auto">
-  //       {headline}
-  //     </p>
-
-  //     {/* Contact Information */}
-  //     <div className="mt-6 flex justify-center gap-8">
-  //       <a
-  //         href={`mailto:${contact.email}`}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         {contact.email}
-  //       </a>
-  //       <a
-  //         href={contact.linkedin}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         LinkedIn
-  //       </a>
-  //       <a
-  //         href={contact.github}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         GitHub
-  //       </a>
-  //       <a
-  //         href={contact.twitter}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         Twitter
-  //       </a>
-  //       <a
-  //         href={contact.medium}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         Medium
-  //       </a>
-  //       <a
-  //         href={contact.leetcode}
-  //         className="text-white text-lg font-semibold hover:text-yellow-400 transition-all duration-300"
-  //       >
-  //         LeetCode
-  //       </a>
-  //     </div>
-
-  //     {/* Location */}
-  //     <div className="mt-4 text-lg text-gray-300">
-  //       <p>{`${location.city}, ${location.state}, ${location.country}`}</p>
-  //     </div>
-  //   </header>
-  // );
 };
 
 export default Header;

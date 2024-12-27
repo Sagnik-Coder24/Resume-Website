@@ -8,11 +8,13 @@ const Projects = ({ projects, gh }) => {
 
   const [index, setIndex] = useState(null);
 
-  const projClicked = (index) => {
-    setIndex(null);
-    setTimeout(() => {
-      setIndex(index);
-    }, 0);
+  const projClicked = (newIndex) => {
+    if (index !== newIndex) {
+      setIndex(null);
+      setTimeout(() => {
+        setIndex(newIndex);
+      }, 0);
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -45,7 +47,7 @@ const Projects = ({ projects, gh }) => {
         {reverseProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg w-[360px] cursor-pointer border-2 border-purple-600 border-opacity-40"
+            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg w-[360px] cursor-pointer border-2 border-purple-600 border-opacity-40 indiv-certificate"
             onClick={() => projClicked(index)}
           >
             <img
