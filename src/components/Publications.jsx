@@ -35,16 +35,16 @@ const Publications = ({ publications, medium }) => {
                   : "md:ml-auto animate-slideLeft"
               }`}
           >
-            <div className="text-base sm:text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal">
+            <div className="text-base sm:text-lg md:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal">
               <p>{publication.title}</p>
             </div>
 
             <p className="text-purple-300 opacity-90 text-base mt-4">
-              <span className="font-semibold">{publication.journal}</span>
+              <span className="font-extrabold">{publication.journal}</span>
               <span className="mx-4 text-purple-500">|</span>
               <span>{publication.date}</span>
             </p>
-            <p className="mt-4 text-left text-purple-200 opacity-70 text-sm sm:text-base tracking-normal leading-normal">
+            <p className="mt-4 text-left text-purple-200 opacity-80 text-sm sm:text-base tracking-normal leading-normal">
               {publication.desc}
             </p>
             <div className="mt-6">

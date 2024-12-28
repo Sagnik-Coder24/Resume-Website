@@ -41,9 +41,11 @@ const Certifications = ({ certifications, link }) => {
         />
       </div>
 
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none animate-slideIn">
-        CERTIFICATIONS
-      </h1>
+      <div className="flex w-full justify-center items-center h-fit">
+        <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-slideIn">
+          CERTIFICATIONS
+        </h1>
+      </div>
 
       <div className="my-10 flex justify-center items-center gap-4 flex-wrap text-sm text-purple-200 whitespace-nowrap animate-slideIn">
         {Array.from(mySkills).map((skill, index) => (

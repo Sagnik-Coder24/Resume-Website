@@ -48,11 +48,13 @@ const IndvProj = ({ projects, index, setIndex }) => {
       </div>
 
       <div className="p-6 lg:max-w-[50%] border-2 border-purple-600 border-opacity-40 rounded-3xl">
-        <div className="text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal flex justify-center items-center mb-8">
-          <p>{curProject.title}</p>
+        <div className="w-full flex justify-center items-center">
+          <div className="w-fit text-lg sm:text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-normal flex justify-center items-center mb-8">
+            <p>{curProject.title}</p>
+          </div>
         </div>
 
-        <div className="text-purple-300 text-sm text-left overflow-y-auto custom-scrollbar flex justify-center items-center tracking-normal leading-normal">
+        <div className="text-violet-300 text-sm text-left overflow-y-auto custom-scrollbar flex justify-center items-center tracking-normal leading-normal">
           <p className="">{curProject.description}</p>
         </div>
         <div className="mt-10 flex justify-center items-center gap-2 flex-wrap text-xs text-purple-200 whitespace-nowrap">

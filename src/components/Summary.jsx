@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import bg1 from "../assets/images/banners/bg1.jpg";
+import bg2 from "../assets/images/banners/bg2.jpg";
 import Languages from "./Languages";
 import Interests from "./Interests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,9 +23,12 @@ const Summary = ({ summary, interests, languages, location }) => {
 
   const compoArr = [
     <section className="text-center p-8 animate-fadeIn">
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
-        ABOUT ME
-      </h1>
+      <div className="flex w-full justify-center items-center h-fit">
+        <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase">
+          ABOUT ME
+        </h1>
+      </div>
+
       <ul className="mt-10 md:mt-8 text-purple-200 text-base list-inside text-left">
         {summary.map((item, index) => (
           <li key={index} className="purple-dot mt-6">
@@ -64,11 +67,11 @@ const Summary = ({ summary, interests, languages, location }) => {
   return (
     <div className="relative w-full min-h-[92vh] overflow-hidden select-none">
       {/* Banner Image */}
-      <div className="w-full h-full absolute top-0 left-0 z-[-1]">
+      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
         <img
-          src={bg1}
+          src={bg2}
           alt="Banner"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
         />
       </div>
 

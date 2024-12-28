@@ -31,9 +31,11 @@ const Projects = ({ projects, gh }) => {
         />
       </div>
 
-      <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none animate-slideUp">
-        PROJECTS
-      </h1>
+      <div className="flex w-full justify-center items-center h-fit">
+        <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-slideUp">
+          PROJECTS
+        </h1>
+      </div>
 
       {index !== null && (
         <IndvProj

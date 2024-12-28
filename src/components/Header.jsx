@@ -25,15 +25,19 @@ const Header = ({ pic, name, title, headline, contact }) => {
         <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12 md:pt-16">
           {/* Left Side Content */}
           <div className="h-auto w-full md:w-1/2 mb-6 md:mb-0 animate-fadeIn">
-            <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
-              Hello 👋, I am
-            </h1>
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
-              {name}
-            </h1>
+            <div className="flex justify-center flex-col items-center md:justify-start md:items-start">
+              <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+                Hello 👋, I am
+              </h1>
+              <h1 className="w-fit text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+                {name}
+              </h1>
+            </div>
             <div className="mt-6 tracking-wide leading-normal">
-              <h2 className="text-xl font-bold text-violet-300">{title}</h2>
-              <p className="text-sm md:text-base mt-2 max-w-3xl text-violet-200">
+              <h2 className="text-xl font-extrabold text-violet-300">
+                {title}
+              </h2>
+              <p className="text-sm md:text-base mt-2 max-w-3xl text-purple-200">
                 {headline}
               </p>
             </div>

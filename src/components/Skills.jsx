@@ -30,11 +30,14 @@ const Skills = ({ skills }) => {
         />
       </div>
 
-      {displayKey && (
-        <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-fadeIn">
-          {displayKey}
-        </h1>
-      )}
+      <div className="flex w-full justify-center items-center mb-10 h-[40px]">
+        {displayKey && (
+          <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-fadeIn">
+            {displayKey}
+          </h1>
+        )}
+      </div>
+
       <div className="mt-12 flex lg:flex-row-reverse flex-col justify-evenly items-center gap-x-16 gap-y-10 animate-fadeIn">
         <div className="max-w-[700px] w-full md:w-4/5 lg:min-w-[500px] min-h-[150px] lg:min-h-[250px] bg-black bg-opacity-40 border-2 border-purple-800 overflow-y-auto custom-scrollbar rounded-xl p-6 flex justify-start items-start text-sm md:text-base text-purple-200 whitespace-nowrap">
           {displaySkills && (
