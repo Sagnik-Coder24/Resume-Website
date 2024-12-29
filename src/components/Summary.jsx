@@ -29,7 +29,7 @@ const Summary = ({ summary, interests, languages, location }) => {
         </h1>
       </div>
 
-      <ul className="mt-10 md:mt-8 text-purple-200 text-base list-inside text-left">
+      <ul className="mt-10 md:mt-8 text-purple-200 text-sm lg:text-base list-inside text-left">
         {summary.map((item, index) => (
           <li key={index} className="purple-dot mt-6">
             {item}
@@ -115,7 +115,7 @@ const Summary = ({ summary, interests, languages, location }) => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center gap-8 mt-8 md:mt-10">
+      <div className="flex justify-center gap-8 mt-8 md:mt-10 mb-4">
         {compoArr.map((_, index) => (
           <div
             key={index}

@@ -39,12 +39,19 @@ const Interests = ({ interests }) => {
 
         <div className="mt-12 flex flex-wrap justify-evenly gap-x-8">
           {interests.map((interest, index) => (
-            <div
-              key={index}
-              className="py-4 md:py-6 rounded-lg interests"
-              onClick={() => getRedditByAxios(interest)}
-            >
-              <Button text={interest} width="320px" />
+            <div key={index}>
+              <div
+                className="py-4 md:py-6 rounded-lg interests hidden sm:block"
+                onClick={() => getRedditByAxios(interest)}
+              >
+                <Button text={interest} width="320px" />
+              </div>
+              <div
+                className="py-4 md:py-6 rounded-lg interests sm:hidden"
+                onClick={() => getRedditByAxios(interest)}
+              >
+                <Button text={interest} width="260px" />
+              </div>
             </div>
           ))}
         </div>

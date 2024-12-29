@@ -32,6 +32,8 @@ import chapp from "./images/chapp.jpeg";
 import todor from "./images/todor.jpeg";
 import ecom from "./images/ecom.jpeg";
 import cts from "./images/logo/CTS.png";
+import hitk from "./images/logo/hitk.png";
+import sphs from "./images/logo/sphs.png";
 
 export default {
   personal_info: {
@@ -201,9 +203,11 @@ export default {
   ],
   education: [
     {
-      degree: "Bachelor of Technology - BTech, Applied Electronics",
+      degree: "Bachelor of Technology - BTech",
+      dept: "Applied Electronics",
       university: "Heritage Institute of Technology",
-      location: "Kolkata, West Bengal, India",
+      img: hitk,
+      location: "Kolkata, West Bengal",
       graduation_year: 2022,
       grade: "8.41",
       activities: ["Photography Club", "Coding Club", "Gaming Club"],
@@ -216,21 +220,38 @@ export default {
         "Circuit Analysis",
         "Digital Image Processing",
       ],
-      additional_learning: [
-        "Web Development: Front-end (HTML, CSS, JavaScript, React, Bootstrap)",
-        "Back-end (Java, Spring Boot)",
-      ],
+      additional_learning: {
+        "Web Development": {
+          "Front End": ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
+          "Back End": ["Java", "Spring Boot"],
+        },
+      },
     },
     {
-      degree: "High School, Science",
+      degree: "High School",
+      dept: "Science",
       university: "South Point High School",
-      location: "Kolkata, West Bengal, India",
+      img: sphs,
+      location: "Kolkata, West Bengal",
       graduation_year: 2018,
       grade: "8.0",
       activities: [
-        "Handball Team - Played as a key member, promoting teamwork, strategy, and physical fitness",
+        "Handball",
+        "Key contributor",
+        "Teamwork & strategy",
+        "Physical fitness",
       ],
       coursework: ["Physics", "Chemistry", "Mathematics", "Computer Science"],
+    },
+    {
+      degree: "Junior School",
+      dept: "Class 1 - 10",
+      university: "South Point School",
+      img: sphs,
+      location: "Kolkata, West Bengal",
+      graduation_year: 2018,
+      grade: "9.4",
+      activities: ["Swimming", "Cricket", "Handball", "Painting", "Abacus"],
     },
   ],
   certifications: {

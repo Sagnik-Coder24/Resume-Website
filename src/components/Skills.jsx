@@ -30,7 +30,7 @@ const Skills = ({ skills }) => {
         />
       </div>
 
-      <div className="flex w-full justify-center items-center mb-10 h-[40px]">
+      <div className="flex w-full justify-center items-center mb-10 min-h-[40px]">
         {displayKey && (
           <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-fadeIn">
             {displayKey}

@@ -77,7 +77,7 @@ const Experience = ({ experience }) => {
                     <h3 className="text-lg sm:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-relaxed">
                       {job.role}
                     </h3>
-                    <p className="text-violet-400 font-semibold tracking-wide leading-relaxed lg:hidden">
+                    <p className="text-violet-400 font-semibold tracking-wide leading-relaxed">
                       {job.company}
                     </p>
                   </div>
@@ -86,8 +86,9 @@ const Experience = ({ experience }) => {
                   </div>
                 </div>
 
-                <p className="text-sm mt-2 text-violet-300 tracking-wide leading-normal">
-                  {job.duration} · {job.work_mode}
+                <p className="text-sm mt-2 text-violet-300 tracking-wide leading-normal flex flex-wrap gap-x-4">
+                  <span>{job.duration}</span>
+                  <span className="opacity-60 whitespace-nowrap">{`( ${job.work_mode} )`}</span>
                 </p>
                 <div className="mt-4">
                   <ul className="list-disc pl-6 text-left">
