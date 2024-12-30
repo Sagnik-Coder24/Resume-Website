@@ -2,6 +2,44 @@ import React from "react";
 import bg2 from "../assets/images/banners/bg2.jpg";
 
 const Education = ({ education }) => {
+  function renderSection(data) {
+    // Check if data is an array
+    if (Array.isArray(data)) {
+      return data.map((item, index) => (
+        <li
+          key={index}
+          className="mt-1 text-sm text-purple-200 tracking-wide leading-normal"
+        >
+          {item}
+        </li>
+      ));
+    }
+
+    // Check if data is a string
+    if (typeof data === "string") {
+      return (
+        <li className="mt-1 text-sm text-purple-200 tracking-wide leading-normal">
+          {data}
+        </li>
+      );
+    }
+
+    // If data is an object, render its keys (recursively)
+    if (typeof data === "object") {
+      return Object.entries(data).map(([key, value], index) => (
+        <li
+          key={index}
+          className="mt-1 text-sm text-purple-200 tracking-wide leading-normal"
+        >
+          <span className="">{key}</span>
+          <ul className="list-disc pl-6">{renderSection(value)}</ul>
+        </li>
+      ));
+    }
+
+    return null;
+  }
+
   return (
     <section className="text-center py-8 px-6 md:py-10 md:px-14 relative overflow-x-hidden">
       <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
@@ -71,7 +109,7 @@ const Education = ({ education }) => {
               </div>
 
               <div
-                className={`text-left w-full ${
+                className={`text-left w-full lg:w-fit border-2 border-purple-600 border-opacity-40 p-6 rounded-3xl bg-black bg-opacity-40 ${
                   index % 2 === 0
                     ? "animate-slideLeft lg:animate-slideIn"
                     : "animate-slideLeft"
@@ -86,7 +124,7 @@ const Education = ({ education }) => {
                       <p className="text-violet-400 text-base font-semibold tracking-wide leading-normal">
                         {edu.university}
                       </p>
-                      <p className="text-violet-400 text-base font-semibold tracking-wide leading-normal lg:hidden">
+                      <p className="text-violet-400 text-sm font-semibold tracking-wide leading-normal lg:hidden">
                         {edu.location}
                       </p>
                     </div>
@@ -109,58 +147,37 @@ const Education = ({ education }) => {
 
                 <div className="mt-4 flex justify-start items-start flex-wrap gap-y-4 gap-x-8">
                   {edu.coursework && (
-                    <div className="border-l-2 border-purple-400 pl-4">
+                    <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
                       <h4 className="text-violet-300 text-sm mb-2">
                         Coursework:
                       </h4>
                       <ul className="list-disc pl-6 text-left">
-                        {edu.coursework.map((course, index) => (
-                          <li
-                            key={index}
-                            className="mt-1 text-sm text-purple-200 tracking-wide leading-normal"
-                          >
-                            {course}
-                          </li>
-                        ))}
+                        {renderSection(edu.coursework)}
                       </ul>
                     </div>
                   )}
 
                   {edu.activities && (
-                    <div className="border-l-2 border-purple-400 pl-4">
+                    <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
                       <h4 className="text-violet-300 text-sm mb-2">
                         Activities:
                       </h4>
                       <ul className="list-disc pl-6 text-left text-purple-200">
-                        {edu.activities.map((activity, index) => (
-                          <li
-                            key={index}
-                            className="mt-1 text-sm text-purple-200 tracking-wide leading-normal"
-                          >
-                            {activity}
-                          </li>
-                        ))}
+                        {renderSection(edu.activities)}
                       </ul>
                     </div>
                   )}
 
-                  {/* {edu.additional_learning && (
-                    <div className="border-l-2 border-purple-400 pl-4">
+                  {edu.additional_learning && (
+                    <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
                       <h4 className="text-violet-300 text-sm mb-2">
                         Additional Learning:
                       </h4>
                       <ul className="list-disc pl-6 text-left text-purple-200">
-                        {edu.additional_learning.map((learning, index) => (
-                          <li
-                            key={index}
-                            className="mt-1 text-sm text-purple-200 tracking-wide leading-normal"
-                          >
-                            {learning}
-                          </li>
-                        ))}
+                        {renderSection(edu.additional_learning)}
                       </ul>
                     </div>
-                  )} */}
+                  )}
                 </div>
               </div>
             </div>
