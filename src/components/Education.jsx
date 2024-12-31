@@ -1,5 +1,4 @@
 import React from "react";
-import bg2 from "../assets/images/banners/bg2.jpg";
 
 const Education = ({ education }) => {
   function renderSection(data) {
@@ -42,14 +41,6 @@ const Education = ({ education }) => {
 
   return (
     <section className="text-center py-8 px-6 md:py-10 md:px-14 relative overflow-x-hidden">
-      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
-        <img
-          src={bg2}
-          alt="Banner"
-          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
-        />
-      </div>
-
       <div className="flex w-full justify-center items-center h-fit mb-10">
         <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-fadeIn">
           Education
@@ -63,7 +54,7 @@ const Education = ({ education }) => {
         {education.map((edu, index) => (
           <div
             key={index}
-            className={`flex items-start justify-between mt-12 ${
+            className={`flex items-start justify-between mt-12 group ${
               index % 2 === 0 ? "flex-row" : "flex-row lg:flex-row-reverse"
             }`}
           >
@@ -91,13 +82,13 @@ const Education = ({ education }) => {
 
               {/* Box Logo */}
               <div
-                className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none animate-fadeIn flex-col justify-center items-center gap-y-4 text-sm ${
+                className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none flex-col justify-center items-center gap-y-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out ${
                   index % 2 === 0
-                    ? "left-[150%] -translate-x-1/2"
-                    : "right-[150%] translate-x-1/2"
+                    ? "left-[155%] -translate-x-1/2"
+                    : "right-[155%] translate-x-1/2"
                 }`}
               >
-                <img src={edu.img} alt="" className="w-32" />
+                <img src={edu.img} alt="" className="w-44" />
                 <div>
                   <p className="text-violet-400 tracking-wide leading-normal whitespace-nowrap">
                     {edu.university}
@@ -109,7 +100,7 @@ const Education = ({ education }) => {
               </div>
 
               <div
-                className={`text-left w-full lg:w-fit border-2 border-purple-600 border-opacity-40 p-6 rounded-3xl bg-black bg-opacity-40 ${
+                className={`text-left w-full lg:min-w-[400px] lg:w-fit border-2 border-purple-600 border-opacity-40 p-6 rounded-3xl bg-black bg-opacity-40 ${
                   index % 2 === 0
                     ? "animate-slideLeft lg:animate-slideIn"
                     : "animate-slideLeft"
@@ -148,7 +139,7 @@ const Education = ({ education }) => {
                 <div className="mt-4 flex justify-start items-start flex-wrap gap-y-4 gap-x-8">
                   {edu.coursework && (
                     <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
-                      <h4 className="text-violet-300 text-sm mb-2">
+                      <h4 className="text-violet-300 text-sm mb-2 tracking-wide leading-normal">
                         Coursework:
                       </h4>
                       <ul className="list-disc pl-6 text-left">
@@ -159,7 +150,7 @@ const Education = ({ education }) => {
 
                   {edu.activities && (
                     <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
-                      <h4 className="text-violet-300 text-sm mb-2">
+                      <h4 className="text-violet-300 text-sm mb-2 tracking-wide leading-normal">
                         Activities:
                       </h4>
                       <ul className="list-disc pl-6 text-left text-purple-200">
@@ -170,7 +161,7 @@ const Education = ({ education }) => {
 
                   {edu.additional_learning && (
                     <div className="border-2 border-purple-600 border-opacity-40 px-6 py-4 rounded-3xl flex-grow">
-                      <h4 className="text-violet-300 text-sm mb-2">
+                      <h4 className="text-violet-300 text-sm mb-2 tracking-wide leading-normal">
                         Additional Learning:
                       </h4>
                       <ul className="list-disc pl-6 text-left text-purple-200">

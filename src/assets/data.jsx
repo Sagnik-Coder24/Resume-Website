@@ -34,6 +34,7 @@ import ecom from "./images/ecom.jpeg";
 import cts from "./images/logo/CTS.png";
 import hitk from "./images/logo/hitk.png";
 import sphs from "./images/logo/sphs.png";
+import sag_lyf_qr from "./images/icons/sag_lyf_qr.png";
 
 export default {
   personal_info: {
@@ -47,13 +48,17 @@ export default {
       country: "India",
     },
     contact_info: {
-      email: "temp@gmail.com",
+      email: "sagnik.ghosh.aeie22@heritageit.edu.in",
       phone: "+91 0909090909",
       linkedin: "https://www.linkedin.com/in/sag-lyf/",
       github: "https://github.com/Sagnik-Coder24",
       twitter: "https://x.com/sag_lyf",
       medium: "https://medium.com/@gosagnik",
       leetcode: "https://leetcode.com/u/sag_lyf/",
+      instagram: {
+        link: "https://www.instagram.com/sag_lyf/",
+        qr_code: sag_lyf_qr,
+      },
     },
     profile_picture: profile_pic,
   },
@@ -235,12 +240,13 @@ export default {
       location: "Kolkata, West Bengal",
       graduation_year: 2018,
       grade: "8.0",
-      activities: [
-        "Handball",
-        "Key contributor",
-        "Teamwork & strategy",
-        "Physical fitness",
-      ],
+      activities: {
+        Handball: [
+          "Key contributor",
+          "Teamwork & strategy",
+          "Physical fitness",
+        ],
+      },
       coursework: ["Physics", "Chemistry", "Mathematics", "Computer Science"],
     },
     {

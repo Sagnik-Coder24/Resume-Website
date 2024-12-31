@@ -1,5 +1,5 @@
 import data from "./assets/data.jsx";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import Summary from "./components/Summary";
 import Skills from "./components/Skills";
@@ -7,6 +7,8 @@ import Experience from "./components/Experience";
 
 import "./index.css";
 import "./App.css";
+import bg2 from "./assets/images/banners/bg2.jpg";
+
 import Education from "./components/Education.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Projects from "./components/Projects/Projects.jsx";
@@ -16,11 +18,27 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NotFound from "./components/Notfound.jsx";
 import ContactMe from "./components/ContactMe.jsx";
+import BackToTop from "./components/Button/BackToTop.jsx";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen bg-darkBg text-white">
+        <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
+          <img
+            src={bg2}
+            alt="Banner"
+            className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
+          />
+        </div>
+        <BackToTop />
+
         <Navbar />
         <Routes>
           <Route

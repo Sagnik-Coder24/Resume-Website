@@ -15,8 +15,15 @@ const IndvProj = ({ projects, index, setIndex }) => {
     index === len ? setIndex(0) : setIndex((i) => i + 1);
   };
 
+  const goToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="mt-12 bg-purple-950 bg-opacity-40 p-6 rounded-xl w-full animate-scaleUp flex justify-evenly items-center gap-x-8 gap-y-8 lg:flex-row flex-col border-2 border-purple-600 border-opacity-40">
+    <div className="mt-12 min-h-[70vh] bg-purple-950 bg-opacity-30 p-6 rounded-xl w-full animate-scaleUp flex justify-evenly items-center gap-x-8 gap-y-8 lg:flex-row flex-col border-2 border-purple-600 border-opacity-40 relative">
       <div className="lg:my-6 border-2 border-purple-600 border-opacity-40 rounded-3xl p-4 select-none">
         <div className="relative">
           <img
@@ -101,6 +108,12 @@ const IndvProj = ({ projects, index, setIndex }) => {
           )}
         </div>
       </div>
+      <button
+        className="absolute bottom-2 text-sm hidden lg:block text-purple-600 opacity-80 hover:opacity-100"
+        onClick={goToBottom}
+      >
+        Scroll to bottom
+      </button>
     </div>
   );
 };

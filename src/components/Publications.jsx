@@ -1,5 +1,4 @@
 import React from "react";
-import bg2 from "../assets/images/banners/bg2.jpg";
 import Button from "./Button/Button";
 
 const Publications = ({ publications, medium }) => {
@@ -7,14 +6,6 @@ const Publications = ({ publications, medium }) => {
 
   return (
     <section className="text-center py-8 px-6 sm:py-10 sm:px-14 animate-fadeIn overflow-x-hidden">
-      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
-        <img
-          src={bg2}
-          alt="Banner"
-          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
-        />
-      </div>
-
       <div className="flex justify-center items-center">
         <h1 className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-purple-500 to-violet-500 select-none uppercase animate-slideIn">
           Public

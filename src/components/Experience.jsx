@@ -1,17 +1,8 @@
 import React from "react";
-import bg2 from "../assets/images/banners/bg2.jpg";
 
 const Experience = ({ experience }) => {
   return (
     <section className="text-center py-8 px-6 md:py-10 md:px-14 relative overflow-x-hidden">
-      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
-        <img
-          src={bg2}
-          alt="Banner"
-          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
-        />
-      </div>
-
       <div className="flex w-full justify-center items-center h-fit mb-10">
         <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-fadeIn">
           Experience

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tooltip } from "@material-tailwind/react";
 
 import gmail from "../assets/images/icons/gmail.png";
@@ -7,20 +7,27 @@ import github from "../assets/images/icons/github.png";
 import twitter from "../assets/images/icons/twitter.png";
 import medium from "../assets/images/icons/medium.png";
 import LC from "../assets/images/icons/LC.png";
+import insta from "../assets/images/icons/insta.png";
 import Button from "./Button/Button";
 import { Link } from "react-router-dom";
-import bg2 from "../assets/images/banners/bg2.jpg";
 
 const Header = ({ pic, name, title, headline, contact }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="min-h-[90vh] flex justify-center items-center pt-4">
-      <div className="w-full h-full absolute top-0 left-0 z-[-1]">
-        <img
-          src={bg2}
-          alt="Banner"
-          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
-        />
-      </div>
       <div className="w-full custom-xlg:w-4/6 h-auto">
         <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12 md:pt-16">
           {/* Left Side Content */}
@@ -55,13 +62,30 @@ const Header = ({ pic, name, title, headline, contact }) => {
           </div>
         </div>
         <div>
-          <div className="w-full flex justify-center flex-wrap gap-8 md:gap-12 space-x-4 mt-7 md:mt-11 px-2 animate-fadeIn">
+          <div className="w-full flex justify-center flex-wrap gap-x-10 gap-y-6 md:gap-12 mt-7 md:mt-11 px-2 animate-fadeIn">
             <Link to="/summary">
-              <Button text="More Details" />
+              <Button
+                text="More Details"
+                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+              />
             </Link>
-            <Button text="Download CV" />
+
+            <a
+              href="/Sagnik_Ghosh_CV_for_portfolio.pdf"
+              target="_blank"
+              download="Sagnik-Ghosh_CV.pdf"
+            >
+              <Button
+                text="Download CV"
+                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+              />
+            </a>
+
             <Link to="/contact">
-              <Button text="Contact Me" />
+              <Button
+                text="Contact Me"
+                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+              />
             </Link>
           </div>
           <div className="w-4/5 mx-auto mt-20 md:mt-36 flex justify-center text-purple-400 animate-scaleUp">
@@ -142,6 +166,19 @@ const Header = ({ pic, name, title, headline, contact }) => {
               >
                 <img
                   src={LC}
+                  alt="LeetCode"
+                  className="w-10 h-10 rounded-full border-[1px] border-purple-600 p-2"
+                />
+              </a>
+            </Tooltip>
+            <Tooltip placement="bottom" content="Instagram">
+              <a
+                href={contact.instagram.link}
+                target="__blank"
+                className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
+              >
+                <img
+                  src={insta}
                   alt="LeetCode"
                   className="w-10 h-10 rounded-full border-[1px] border-purple-600 p-2"
                 />

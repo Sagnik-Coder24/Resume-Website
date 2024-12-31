@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import bg2 from "../assets/images/banners/bg2.jpg";
 import Languages from "./Languages";
 import Interests from "./Interests";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -66,15 +65,6 @@ const Summary = ({ summary, interests, languages, location }) => {
 
   return (
     <div className="relative w-full min-h-[92vh] overflow-hidden select-none">
-      {/* Banner Image */}
-      <div className="w-full h-full absolute top-0 left-0 z-[-1] select-none">
-        <img
-          src={bg2}
-          alt="Banner"
-          className="w-full h-full object-cover opacity-15 fixed top-0 left-0"
-        />
-      </div>
-
       {/* Main Content Container */}
       <div
         id="scrollable-div"
