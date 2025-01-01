@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Button from "./Button/Button";
+import Button from "../Button/Button";
 import axios from "axios";
 
 const Interests = ({ interests }) => {

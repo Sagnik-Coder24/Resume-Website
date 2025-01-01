@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Tooltip } from "@material-tailwind/react";
 
-import gmail from "../assets/images/icons/gmail.png";
-import linkedin from "../assets/images/icons/linkedin.png";
-import github from "../assets/images/icons/github.png";
-import twitter from "../assets/images/icons/twitter.png";
-import medium from "../assets/images/icons/medium.png";
-import LC from "../assets/images/icons/LC.png";
-import insta from "../assets/images/icons/insta.png";
-import Button from "./Button/Button";
+import gmail from "../../assets/images/icons/gmail.png";
+import linkedin from "../../assets/images/icons/linkedin.png";
+import github from "../../assets/images/icons/github.png";
+import twitter from "../../assets/images/icons/twitter.png";
+import medium from "../../assets/images/icons/medium.png";
+import LC from "../../assets/images/icons/LC.png";
+import insta from "../../assets/images/icons/insta.png";
+import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import Instagram from "./Instagram";
 
 const Header = ({ pic, name, title, headline, contact }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [instaClicked, setInstaClicked] = useState(false);
+
+  console.log(instaClicked);
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      if (window.innerWidth < 500) setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -172,18 +176,24 @@ const Header = ({ pic, name, title, headline, contact }) => {
               </a>
             </Tooltip>
             <Tooltip placement="bottom" content="Instagram">
-              <a
-                href={contact.instagram.link}
-                target="__blank"
+              <button
                 className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
+                onClick={() => setInstaClicked(true)}
               >
                 <img
                   src={insta}
                   alt="LeetCode"
                   className="w-10 h-10 rounded-full border-[1px] border-purple-600 p-2"
                 />
-              </a>
+              </button>
             </Tooltip>
+            {instaClicked && (
+              <Instagram
+                link={contact.instagram.link}
+                qr={contact.instagram.qr_code}
+                setInstaClicked={setInstaClicked}
+              />
+            )}
           </div>
         </div>
       </div>

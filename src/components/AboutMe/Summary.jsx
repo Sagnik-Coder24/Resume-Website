@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Languages from "./Languages";
 import Interests from "./Interests";
+import Location from "./Location";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import Location from "./Location";
 
 const Summary = ({ summary, interests, languages, location }) => {
   const [divId, setDivId] = useState(

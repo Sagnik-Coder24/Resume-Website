@@ -1,7 +1,7 @@
 import data from "./assets/data.jsx";
 import React, { useEffect } from "react";
-import Header from "./components/Header";
-import Summary from "./components/Summary";
+import Header from "./components/MainPage/Header.jsx";
+import Summary from "./components/AboutMe/Summary";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 
@@ -16,7 +16,7 @@ import Publications from "./components/Publications.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NotFound from "./components/Notfound.jsx";
+import NotFound from "./components/MainPage/Notfound.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 import BackToTop from "./components/Button/BackToTop.jsx";
 
