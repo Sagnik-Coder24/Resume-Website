@@ -17,7 +17,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NotFound from "./components/MainPage/Notfound.jsx";
-import ContactMe from "./components/ContactMe.jsx";
+import ContactMe from "./components/MainPage/ContactMe.jsx";
 import BackToTop from "./components/Button/BackToTop.jsx";
 
 function App() {

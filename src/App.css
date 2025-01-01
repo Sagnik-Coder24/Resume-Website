@@ -40,6 +40,42 @@
   scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
+/* Text animation rolling */
+.role {
+  display: block;
+  height: 100%;
+  padding-left: 8px;
+  color: #8f60ff;
+  animation: role-change 4s infinite;
+}
+
+@keyframes role-change {
+  10% {
+    transform: translateY(-102%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-202%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-302%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-402%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+
 /* Custom bullet with purple color */
 li.purple-dot {
   padding-left: 25px;
@@ -108,4 +144,28 @@ li.purple-dot::before {
     opacity: 1;
     transform: translateX(0%);
   }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(45deg, #9b4d96, #6b46c1, #d53f8c);
+  background-size: 400% 400%;
+  animation: moveGradient 6s ease infinite;
 }

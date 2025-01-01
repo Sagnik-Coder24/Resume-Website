@@ -40,8 +40,12 @@ export default {
   personal_info: {
     name: "SAGNIK GHOSH",
     title: "Associate at Cognizant",
-    headline:
-      "Aspiring Full Stack Developer with 2+ years of experience, a strong passion for DSA, problem-solving, and a commitment to lifelong learning",
+    headline: [
+      "Full Stack Developer",
+      "DSA enthusiast",
+      "Problem solver",
+      "Lifelong learner", // Must be 4
+    ],
     location: {
       city: "Kolkata",
       state: "West Bengal",
@@ -63,7 +67,7 @@ export default {
     profile_picture: profile_pic,
   },
   summary: [
-    "Software Engineer at Cognizant with a passion for coding 💻 and continuous learning 📚.",
+    "Software Engineer at Cognizant ( 2+ YOE ) with a passion for coding 💻 and continuous learning 📚.",
     "Focused on mastering the MERN stack (MongoDB, Express, React, Node.js) 🔧.",
     "Deepening understanding of Data Structures & Algorithms (DSA) 🔍 to build efficient, scalable solutions ⚙️.",
     "Solved over 100 problems on platforms like Leetcode, enhancing problem-solving abilities 💡.",

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Tooltip } from "@material-tailwind/react";
 
 import gmail from "../../assets/images/icons/gmail.png";
@@ -11,46 +11,50 @@ import insta from "../../assets/images/icons/insta.png";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import Instagram from "./Instagram";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ pic, name, title, headline, contact }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [instaClicked, setInstaClicked] = useState(false);
-
-  console.log(instaClicked);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 500) setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="min-h-[90vh] flex justify-center items-center pt-4">
       <div className="w-full custom-xlg:w-4/6 h-auto">
-        <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center text-center md:text-left p-6 lg:p-12 md:pt-16">
+        <div className="flex flex-col md:flex-row justify-evenly custom-xlg:justify-between items-center md:text-left p-6 lg:p-12 md:pt-16">
           {/* Left Side Content */}
-          <div className="h-auto w-full md:w-1/2 mb-6 md:mb-0 animate-fadeIn">
+          <div className="h-auto min-w-fit md:w-1/2 mb-6 md:mb-0 animate-fadeIn text-left">
             <div className="flex justify-center flex-col items-center md:justify-start md:items-start">
-              <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+              <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
                 Hello 👋, I am
               </h1>
-              <h1 className="w-fit text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none md:-translate-x-1">
+              <h1 className="w-fit text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none">
                 {name}
               </h1>
             </div>
-            <div className="mt-6 tracking-wide leading-normal">
-              <h2 className="text-xl font-extrabold text-violet-300">
+
+            <div className="text-[25px]">
+              <h2 className="mt-6 tracking-wide leading-normal font-extrabold text-violet-300">
+                <span className="mr-2 sm:mr-4">
+                  <FontAwesomeIcon icon={faStar} beatFade />
+                </span>
                 {title}
               </h2>
-              <p className="text-sm md:text-base mt-2 max-w-3xl text-purple-200">
-                {headline}
-              </p>
+              <div className="select-none whitespace-nowrap flex h-[40px] w-full md:w-fit justify-center items-center md:justify-start tracking-wide leading-normal box-content">
+                <p className="text-violet-300">
+                  <span className="mr-2 sm:mr-4">
+                    <FontAwesomeIcon icon={faStar} beatFade />
+                  </span>
+                  I am a
+                </p>
+                <div className="font-bold max-h-[40px] text-left overflow-hidden relative mt-[6px]">
+                  {headline.map((word, index) => (
+                    <span key={index} className="role">
+                      {word}
+                    </span>
+                  ))}
+                  <span className="role">{headline[0]}</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -70,7 +74,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Link to="/summary">
               <Button
                 text="More Details"
-                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+                width={
+                  window.innerWidth < 430
+                    ? `${window.innerWidth - 60}px`
+                    : "auto"
+                }
               />
             </Link>
 
@@ -81,14 +89,22 @@ const Header = ({ pic, name, title, headline, contact }) => {
             >
               <Button
                 text="Download CV"
-                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+                width={
+                  window.innerWidth < 430
+                    ? `${window.innerWidth - 60}px`
+                    : "auto"
+                }
               />
             </a>
 
             <Link to="/contact">
               <Button
                 text="Contact Me"
-                width={windowWidth < 430 ? `${windowWidth - 60}px` : "auto"}
+                width={
+                  window.innerWidth < 430
+                    ? `${window.innerWidth - 60}px`
+                    : "auto"
+                }
               />
             </Link>
           </div>
