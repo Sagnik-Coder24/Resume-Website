@@ -1,12 +1,27 @@
 import { faArrowRight, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
+import Swal from "sweetalert2";
 
 const access_key = import.meta.env.VITE_ACCESS_KEY;
 
 const ContactMe = () => {
   const handleSubmit = (e) => {
-    alert("Message sent!");
+    e.preventDefault();
+    Swal.fire({
+      icon: "success",
+      title: "Message Sent!",
+      text: "Your message has been successfully sent. Thanks for contacting.",
+      showConfirmButton: true,
+      confirmButtonColor: "#6a0dad",
+      customClass: {
+        popup: "bg-gray-800 text-white rounded-lg",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        e.target.submit();
+      }
+    });
   };
 
   return (
@@ -24,7 +39,7 @@ const ContactMe = () => {
             action="https://api.web3forms.com/submit"
             method="POST"
             onSubmit={handleSubmit}
-            className="flex flex-col gap-y-8"
+            className="flex flex-col gap-y-8 "
           >
             <input type="hidden" name="access_key" value={access_key}></input>
             <input
@@ -42,6 +57,7 @@ const ContactMe = () => {
               <input
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Full name here..."
                 className="w-full p-3 mt-2 border-2 border-purple-600 border-opacity-70 bg-black bg-opacity-20 text-purple-200 rounded-lg focus:outline-none focus:border-opacity-100 focus:placeholder-opacity-0 placeholder-purple-400 placeholder-opacity-70"
                 required
@@ -57,6 +73,7 @@ const ContactMe = () => {
               </label>
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Email is optional..."
                 className="w-full p-3 mt-2 border-2 border-purple-600 border-opacity-70 bg-black bg-opacity-20 text-purple-200 rounded-lg focus:outline-none focus:border-opacity-100 focus:placeholder-opacity-0 placeholder-purple-400 placeholder-opacity-70"
@@ -72,6 +89,7 @@ const ContactMe = () => {
               </label>
               <textarea
                 name="message"
+                id="message"
                 placeholder="Type your message here..."
                 rows="6"
                 className="w-full p-3 mt-2 border-2 border-purple-600 border-opacity-70 bg-black bg-opacity-20 text-purple-200 rounded-lg focus:outline-none focus:border-opacity-100 focus:placeholder-opacity-0 placeholder-purple-400 placeholder-opacity-70"
