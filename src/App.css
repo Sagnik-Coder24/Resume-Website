@@ -170,12 +170,6 @@ li.purple-dot::before {
   animation: moveGradient 6s ease infinite;
 }
 
-.heart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .heart {
   width: 200px;
   height: 200px;
