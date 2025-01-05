@@ -35,16 +35,16 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <div className="text-[25px]">
               <h2 className="mt-6 tracking-wide leading-normal font-extrabold text-violet-300">
                 <span className="mr-2 sm:mr-4">
-                  <FontAwesomeIcon icon={faStar} beatFade />
+                  <FontAwesomeIcon icon={faStar} size="2xs" beatFade />
                 </span>
                 {title}
               </h2>
               <div className="select-none whitespace-nowrap flex h-[40px] w-full md:w-fit justify-center items-center md:justify-start tracking-wide leading-normal box-content">
                 <p className="text-violet-300">
                   <span className="mr-2 sm:mr-4">
-                    <FontAwesomeIcon icon={faStar} beatFade />
+                    <FontAwesomeIcon icon={faStar} size="2xs" beatFade />
                   </span>
-                  I am a
+                  And a
                 </p>
                 <div className="font-bold max-h-[40px] text-left overflow-hidden relative mt-[6px]">
                   {headline.map((word, index) => (
@@ -108,12 +108,16 @@ const Header = ({ pic, name, title, headline, contact }) => {
               />
             </Link>
           </div>
-          <div className="w-4/5 mx-auto mt-20 md:mt-36 flex justify-center text-purple-400 animate-scaleUp">
-            <p>Let's Connect! Find Me on Social Media</p>
+          <div className="w-4/5 mx-auto mt-20 md:mt-32 flex justify-center text-purple-400 animate-scaleUp tracking-wide">
+            <p>Let's Connect! You can find me on -</p>
           </div>
-          <hr className="border-t-2 border-purple-400 w-[283px] mx-auto mt-2 mb-2 animate-scaleUp" />
+          <hr className="border-none h-[3px] rounded-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none w-[280px] mx-auto mt-2 mb-2 md:mb-6 animate-scaleUp" />
           <div className="flex flex-row justify-evenly items-center p-6 flex-wrap gap-4">
-            <Tooltip placement="bottom" content="Email">
+            <Tooltip
+              placement="bottom"
+              content="Email"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={`mailto:${contact.email}`}
                 target="_blank"
@@ -126,7 +130,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="LinkedIn">
+            <Tooltip
+              placement="bottom"
+              content="LinkedIn"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={contact.linkedin}
                 target="_blank"
@@ -139,7 +147,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="GitHub">
+            <Tooltip
+              placement="bottom"
+              content="GitHub"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={contact.github}
                 target="_blank"
@@ -152,7 +164,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="Twitter">
+            <Tooltip
+              placement="bottom"
+              content="Twitter"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={contact.twitter}
                 target="_blank"
@@ -165,7 +181,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="Medium">
+            <Tooltip
+              placement="bottom"
+              content="Medium"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={contact.medium}
                 target="__blank"
@@ -178,7 +198,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="LeetCode">
+            <Tooltip
+              placement="bottom"
+              content="LeetCode"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <a
                 href={contact.leetcode}
                 target="__blank"
@@ -191,7 +215,11 @@ const Header = ({ pic, name, title, headline, contact }) => {
                 />
               </a>
             </Tooltip>
-            <Tooltip placement="bottom" content="Instagram">
+            <Tooltip
+              placement="bottom"
+              content="Instagram"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+            >
               <button
                 className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"
                 onClick={() => setInstaClicked(true)}

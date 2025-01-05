@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Button/Button";
+import Footer from "./MainPage/Footer";
 
 const Certifications = ({ certifications, link }) => {
   let reversedCertifications = [...certifications].reverse();
@@ -31,69 +32,72 @@ const Certifications = ({ certifications, link }) => {
   }, [filterSkill]);
 
   return (
-    <section className="text-center py-12 px-4 sm:px-20">
-      <div className="flex w-full justify-center items-center h-fit">
-        <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-slideIn">
-          CERTIFICATIONS
-        </h1>
-      </div>
+    <>
+      <section className="text-center min-h-[89.4vh] py-12 px-4 sm:px-20">
+        <div className="flex w-full justify-center items-center h-fit">
+          <h1 className="w-fit text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none uppercase animate-slideIn">
+            CERTIFICATIONS
+          </h1>
+        </div>
 
-      <div className="my-10 flex justify-center items-center gap-4 flex-wrap text-sm text-purple-200 whitespace-nowrap animate-slideIn">
-        {Array.from(mySkills).map((skill, index) => (
-          <div
-            key={index}
-            className={`cursor-pointer p-2 border-2 border-purple-600 rounded-full w-[100px]  hover:bg-purple-600 hover:text-purple-100 transition-all ease-in-out duration-300 ${
-              skill === filterSkill
-                ? "bg-purple-600 text-purple-100"
-                : "bg-purple-950 bg-opacity-40"
-            }`}
-            onClick={() => skillClick(skill)}
-          >
-            {skill}
-          </div>
-        ))}
-      </div>
+        <div className="my-10 flex justify-center items-center gap-4 flex-wrap text-sm text-purple-200 whitespace-nowrap animate-slideIn">
+          {Array.from(mySkills).map((skill, index) => (
+            <div
+              key={index}
+              className={`cursor-pointer p-2 border-2 border-purple-600 rounded-full w-[100px]  hover:bg-purple-600 hover:text-purple-100 transition-all ease-in-out duration-300 ${
+                skill === filterSkill
+                  ? "bg-purple-600 text-purple-100"
+                  : "bg-purple-950 bg-opacity-40"
+              }`}
+              onClick={() => skillClick(skill)}
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
 
-      <div className="mt-12 flex flex-wrap justify-evenly items-center gap-x-24 gap-y-10 animate-slideIn">
-        {certificates.map((cert, index) => (
-          <div
-            key={index}
-            className="bg-purple-950 bg-opacity-40 p-6 rounded-lg hover:shadow-lg hover:shadow-purple-400 transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px] indiv-certificate"
-          >
-            <a href={cert.url} target="_blank" rel="noopener noreferrer">
-              <div className="relative mb-6 select-none">
-                <img
-                  src={cert.img}
-                  alt={cert.title}
-                  className="w-full h-48 object-cover rounded-lg border-4 border-purple-600 hover:shadow-2xl transform transition-all ease-in-out duration-300"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-purple-950 bg-opacity-70 rounded-lg transition-all duration-300">
-                  <p className="text-purple-100 text-lg font-semibold">
-                    View Certificate
+        <div className="mt-12 flex flex-wrap justify-evenly items-center gap-x-24 gap-y-10 animate-slideIn">
+          {certificates.map((cert, index) => (
+            <div
+              key={index}
+              className="bg-purple-950 bg-opacity-40 p-6 rounded-lg hover:shadow-lg hover:shadow-purple-400 transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px] indiv-certificate"
+            >
+              <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                <div className="relative mb-6 select-none">
+                  <img
+                    src={cert.img}
+                    alt={cert.title}
+                    className="w-full h-48 object-cover rounded-lg border-4 border-purple-600 hover:shadow-2xl transform transition-all ease-in-out duration-300"
+                  />
+                  <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-purple-950 bg-opacity-70 rounded-lg transition-all duration-300">
+                    <p className="text-purple-100 text-lg font-semibold">
+                      View Certificate
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <div className="h-[90px] flex justify-center items-center">
+                <div className="">
+                  <h3 className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-none">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-purple-100 opacity-60 tracking-wide leading-relaxed mt-2 capitalize">
+                    {cert.organization}
                   </p>
+                  {/* <p className="text-sm mt-2 text-gray-500">{cert.date}</p> */}
                 </div>
               </div>
-            </a>
-            <div className="h-[90px] flex justify-center items-center">
-              <div className="">
-                <h3 className="text-lg md:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 tracking-normal leading-none">
-                  {cert.title}
-                </h3>
-                <p className="text-sm text-purple-100 opacity-60 tracking-wide leading-relaxed mt-2 capitalize">
-                  {cert.organization}
-                </p>
-                {/* <p className="text-sm mt-2 text-gray-500">{cert.date}</p> */}
-              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="mt-16 animate-slideIn">
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <Button text={"View All Certificates"} />
-        </a>
-      </div>
-    </section>
+          ))}
+        </div>
+        <div className="mt-16 animate-slideIn">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <Button text={"View All Certificates"} />
+          </a>
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 };
 

@@ -82,7 +82,7 @@ const IndvProj = ({ projects, index, setIndex }) => {
             rel="noopener noreferrer"
             className="text-purple-300 hover:text-purple-400"
           >
-            Live
+            Live Demo
           </a>
           <span className="mx-4 text-purple-500">|</span>
           <a

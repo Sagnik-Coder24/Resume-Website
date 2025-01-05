@@ -27,7 +27,7 @@ const BackToTop = () => {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-30 transition-opacity duration-300 ease-in-out ${
+      className={`fixed bottom-8 right-4 z-30 transition-opacity duration-300 ease-in-out ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

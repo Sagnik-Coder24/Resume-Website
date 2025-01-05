@@ -46,7 +46,7 @@
   height: 100%;
   padding-left: 8px;
   color: #8f60ff;
-  animation: role-change 4s infinite;
+  animation: role-change 5s infinite;
 }
 
 @keyframes role-change {
