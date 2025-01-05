@@ -21,7 +21,7 @@ const Publications = ({ publications, medium }) => {
           {reversePublications.map((publication, index) => (
             <div
               key={index}
-              className={`bg-purple-950 bg-opacity-40 border-2 border-purple-600 border-opacity-40 py-6 px-8 rounded-lg mb-8 lg:w-3/4
+              className={`bg-purple-950 bg-opacity-40 border-2 border-purple-600 border-opacity-40 py-6 px-8 rounded-lg mb-8 lg:w-3/4 hover:shadow-purple-custom transition-all duration-300 ease-in-out
               ${
                 index % 2 === 0
                   ? "md:mr-auto animate-slideIn"

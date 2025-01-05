@@ -603,6 +603,8 @@ export default {
     "Coding",
     "Gaming",
     "Reading Books",
+    "Stock Market",
+    "Investing",
     "Writing technical blogs",
   ],
   publications: [

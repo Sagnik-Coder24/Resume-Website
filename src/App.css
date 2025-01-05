@@ -104,6 +104,11 @@ li.purple-dot::before {
   background-image: url("./assets//images/banners/lang.jpeg");
   background-size: cover;
   background-position: center;
+  box-shadow: 0 0 15px rgba(159, 122, 234, 0.733);
+}
+
+.language:hover {
+  box-shadow: 0 0 30px rgba(159, 122, 234, 0.979);
 }
 
 .language::before {

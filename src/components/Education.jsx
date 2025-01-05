@@ -56,7 +56,7 @@ const Education = ({ education }) => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className={`flex items-start justify-between mt-12 group ${
+              className={`flex items-start justify-between mt-12 ${
                 index % 2 === 0 ? "flex-row" : "flex-row lg:flex-row-reverse"
               }`}
             >
@@ -84,7 +84,7 @@ const Education = ({ education }) => {
 
                 {/* Box Logo */}
                 <div
-                  className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none flex-col justify-center items-center gap-y-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out ${
+                  className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none flex-col justify-center items-center gap-y-4 text-sm ${
                     index % 2 === 0
                       ? "left-[155%] -translate-x-1/2"
                       : "right-[155%] translate-x-1/2"
@@ -92,10 +92,10 @@ const Education = ({ education }) => {
                 >
                   <img src={edu.img} alt="" className="w-44" />
                   <div>
-                    <p className="text-violet-400 tracking-wide leading-normal whitespace-nowrap">
+                    <p className="text-violet-300 tracking-wide leading-normal whitespace-nowrap">
                       {edu.university}
                     </p>
-                    <p className="text-violet-400 tracking-wide leading-normal whitespace-nowrap">
+                    <p className="text-violet-300 tracking-wide leading-normal whitespace-nowrap">
                       {edu.location}
                     </p>
                   </div>

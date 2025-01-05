@@ -1,12 +1,18 @@
 import { faArrowRight, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 import Swal from "sweetalert2";
 import Footer from "./Footer";
 
 const access_key = import.meta.env.VITE_ACCESS_KEY;
 
 const ContactMe = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     Swal.fire({

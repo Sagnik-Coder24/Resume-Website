@@ -3,8 +3,10 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        neonGreen: "#39FF14", // This defines neon green as #39FF14
+      boxShadow: {
+        "purple-custom": "0 0 25px rgba(159, 122, 234, 0.7)",
+        "purple-custom_logo": "0 0 25px rgba(159, 122, 234, 0.9)",
+        "purple-custom_logo_hover": "0 0 45px rgba(159, 122, 234, 1)",
       },
       screens: {
         "custom-xlg": "1400px",

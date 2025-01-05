@@ -13,7 +13,7 @@ const Languages = ({ languages }) => {
         {languages.map((language, index) => (
           <div
             key={index}
-            className="p-4 bg-black rounded-lg border-2 border-purple-800 lg:w-3/4 animate-slideUp transform transition-all hover:shadow-2xl hover:shadow-purple-400 duration-300 hover:scale-105 language"
+            className="p-4 bg-black rounded-lg border-2 border-purple-800 lg:w-3/4 animate-slideUp transform transition-all duration-300 hover:scale-105 language"
           >
             <h3 className="text-2xl font-semibold text-purple-400 mb-1">
               {language.language}

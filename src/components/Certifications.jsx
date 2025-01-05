@@ -60,7 +60,7 @@ const Certifications = ({ certifications, link }) => {
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-purple-950 bg-opacity-40 p-6 rounded-lg hover:shadow-lg hover:shadow-purple-400 transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px] indiv-certificate"
+              className="bg-purple-950 bg-opacity-40 p-6 rounded-lg hover:shadow-purple-custom transform hover:scale-105 transition-all ease-in-out duration-300 border-2 border-purple-600 border-opacity-40 w-[320px] h-[370px] indiv-certificate"
             >
               <a href={cert.url} target="_blank" rel="noopener noreferrer">
                 <div className="relative mb-6 select-none">

@@ -37,7 +37,7 @@ const Interests = ({ interests }) => {
           </h1>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-evenly gap-x-8">
+        <div className="mt-8 flex flex-wrap justify-evenly gap-x-8">
           {interests.map((interest, index) => (
             <div key={index}>
               <div

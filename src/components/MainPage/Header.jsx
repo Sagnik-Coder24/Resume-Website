@@ -12,7 +12,7 @@ import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import Instagram from "./Instagram";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ pic, name, title, headline, contact }) => {
   const [instaClicked, setInstaClicked] = useState(false);
@@ -46,7 +46,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
                   </span>
                   And a
                 </p>
-                <div className="font-bold max-h-[40px] text-left overflow-hidden relative mt-[6px]">
+                <div className="font-bold max-h-[40px] text-left overflow-hidden relative mt-[5px]">
                   {headline.map((word, index) => (
                     <span key={index} className="role">
                       {word}
@@ -64,7 +64,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
               <img
                 src={pic}
                 alt="Profile"
-                className="w-full h-full rounded-3xl border-2 p-2 border-purple-600 shadow-lg shadow-purple-400 hover:shadow-2xl hover:shadow-purple-400 duration-300 ease-in-out"
+                className="w-full h-full rounded-3xl border-2 p-2 border-purple-600 shadow-purple-custom_logo hover:shadow-purple-custom_logo_hover duration-300 ease-in-out"
               />
             </div>
           </div>
@@ -109,14 +109,19 @@ const Header = ({ pic, name, title, headline, contact }) => {
             </Link>
           </div>
           <div className="w-4/5 mx-auto mt-20 md:mt-32 flex justify-center text-purple-400 animate-scaleUp tracking-wide">
-            <p>Let's Connect! You can find me on -</p>
+            <p>
+              Let's Connect! You can find me on
+              <span className="ml-2">
+                <FontAwesomeIcon icon={faArrowDown} size="sm" bounce />
+              </span>
+            </p>
           </div>
           <hr className="border-none h-[3px] rounded-full bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 select-none w-[280px] mx-auto mt-2 mb-2 md:mb-6 animate-scaleUp" />
           <div className="flex flex-row justify-evenly items-center p-6 flex-wrap gap-4">
             <Tooltip
               placement="bottom"
               content="Email"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={`mailto:${contact.email}`}
@@ -133,7 +138,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="LinkedIn"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={contact.linkedin}
@@ -150,7 +155,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="GitHub"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={contact.github}
@@ -167,7 +172,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="Twitter"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={contact.twitter}
@@ -184,7 +189,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="Medium"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={contact.medium}
@@ -201,7 +206,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="LeetCode"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <a
                 href={contact.leetcode}
@@ -218,7 +223,7 @@ const Header = ({ pic, name, title, headline, contact }) => {
             <Tooltip
               placement="bottom"
               content="Instagram"
-              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none tracking-wide"
+              className="bg-pink-300 bg-opacity-90 text-black px-4 py-1 rounded-2xl mt-2 select-none text-sm tracking-wide"
             >
               <button
                 className="transform transition-transform duration-200 ease-in-out hover:scale-110 animate-scaleUp"

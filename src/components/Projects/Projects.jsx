@@ -51,8 +51,8 @@ const Projects = ({ projects, gh }) => {
           {reverseProjects.map((project, ind) => (
             <div
               key={ind}
-              className={`bg-purple-950 bg-opacity-40 p-6 rounded-lg w-[360px] cursor-pointer border-2 border-purple-600 border-opacity-40 indiv-certificate transition-all duration-300 ease-in-out ${
-                ind === index && "shadow-lg shadow-purple-400"
+              className={`bg-purple-950 bg-opacity-40 p-6 rounded-lg w-[360px] cursor-pointer border-2 border-purple-600 border-opacity-40 indiv-certificate hover:shadow-purple-custom transition-all duration-300 ease-in-out ${
+                ind === index && "shadow-purple-custom"
               }`}
               onClick={() => projClicked(ind)}
             >
