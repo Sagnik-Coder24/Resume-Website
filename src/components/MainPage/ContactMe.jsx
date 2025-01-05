@@ -54,7 +54,7 @@ const ContactMe = () => {
               <input
                 type="hidden"
                 name="redirect"
-                value="http://localhost:5173/" // Change this to live site
+                value="https://sagnik-ghosh.netlify.app/" // Change this to live site
               ></input>
               <div>
                 <label
