@@ -31,6 +31,7 @@ import gh from "./images/gh.jpeg";
 import chapp from "./images/chapp.jpeg";
 import todor from "./images/todor.jpeg";
 import ecom from "./images/ecom.jpeg";
+import rpws from "./images/rpws.png";
 import cts from "./images/logo/CTS.png";
 import hitk from "./images/logo/hitk.png";
 import sphs from "./images/logo/sphs.png";
@@ -579,6 +580,22 @@ export default {
       url: "https://ecommerce-fashion-redux.netlify.app/",
       gh: "https://github.com/Sagnik-Coder24/Ecommerce-Redux",
       img: ecom,
+    },
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "My personal portfolio website is a place where I share my journey as a developer. It showcases my experience, projects, and technical blogs, giving a glimpse into my passion for learning and growing in the tech world. It's a reflection of who I am and the work I love—building, learning, and connecting with others.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "CSS",
+        "Git",
+        "Vite",
+      ],
+      url: "https://sagnik-ghosh.netlify.app/",
+      gh: "https://github.com/Sagnik-Coder24/Resume-Website",
+      img: rpws,
     },
   ],
   languages: [
