@@ -84,13 +84,13 @@ const Education = ({ education }) => {
 
                 {/* Box Logo */}
                 <div
-                  className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none flex-col justify-center items-center gap-y-4 text-sm ${
+                  className={`w-fit absolute top-1/2 -translate-y-1/2 lg:flex hidden select-none flex-col justify-center items-center gap-y-4 text-sm animate-fadeIn ${
                     index % 2 === 0
                       ? "left-[155%] -translate-x-1/2"
                       : "right-[155%] translate-x-1/2"
                   }`}
                 >
-                  <img src={edu.img} alt="" className="w-44" />
+                  <img src={edu.img} alt="" className="w-36" />
                   <div>
                     <p className="text-violet-300 tracking-wide leading-normal whitespace-nowrap">
                       {edu.university}
